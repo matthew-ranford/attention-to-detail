@@ -20,7 +20,8 @@ function Navigation() {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
-              <Offcanvas.Header closeButton>
+              <Offcanvas.Header closeButton />
+              <Offcanvas.Header>
                 <Navbar.Brand>
                   <img
                     src="client/images/atd-logo.png"
