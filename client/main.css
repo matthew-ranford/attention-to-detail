@@ -16,3 +16,11 @@
 .background {
   background-color: rgb(37, 37, 37);
 }
+
+/* SERVICES SECTION */
+@media (max-width: 768px) {
+  /* SERVICES SECTION - IMAGES */
+  .reverse-col {
+    flex-direction: column-reverse;
+  }
+}
