@@ -7,11 +7,7 @@ function Navigation() {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar
-          key={expand}
-          expand={expand}
-          className="bg-body-tertiary mb-3 p-3"
-        >
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary p-3">
           <Container fluid>
             <Navbar.Brand href="#">
               <h1 className="px-3">

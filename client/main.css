@@ -12,3 +12,7 @@
     scroll-behavior: smooth;
   }
 }
+
+.background {
+  background-color: rgb(37, 37, 37);
+}
