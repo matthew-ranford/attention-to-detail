@@ -1,6 +1,7 @@
 import Navigation from './Navbar'
 import About from './About'
 import Services from './Services'
+import Projects from './Projects'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="background">
         <About />
         <Services />
+        <Projects />
       </div>
     </>
   )

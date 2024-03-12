@@ -38,7 +38,7 @@ function Navigation() {
                   <Nav.Link href="#services">
                     <h2>Services</h2>
                   </Nav.Link>
-                  <Nav.Link href="#about">
+                  <Nav.Link href="#projects">
                     <h2>Projects</h2>
                   </Nav.Link>
                   <Nav.Link href="#gallery">

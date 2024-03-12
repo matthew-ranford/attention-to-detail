@@ -24,3 +24,7 @@
     flex-direction: column-reverse;
   }
 }
+
+.modal-90w {
+  width: 90%;
+}
