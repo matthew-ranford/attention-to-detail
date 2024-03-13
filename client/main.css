@@ -13,8 +13,14 @@
   }
 }
 
+/* MAIN BACKGROUND COLOUR */
 .background {
   background-color: rgb(37, 37, 37);
+}
+
+/* NAVBAR SECTION */
+button.btn-close {
+  background-color: rgb(255, 255, 255);
 }
 
 /* SERVICES SECTION */
