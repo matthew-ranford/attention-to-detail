@@ -3,6 +3,7 @@ import About from './About'
 import Services from './Services'
 import Projects from './Projects'
 import Gallery from './Gallery'
+import Contact from './Contact'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Services />
         <Projects />
         <Gallery />
+        <Contact />
       </div>
     </>
   )
