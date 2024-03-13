@@ -4,6 +4,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { motion } from 'framer-motion'
 
+import logo from '../images/atd-logo.png'
+
 function Navigation() {
   return (
     <>
@@ -80,10 +82,10 @@ function Navigation() {
               <Offcanvas.Header closeButton className="background">
                 <Navbar.Brand>
                   <img
-                    src="client/images/atd-logo.png"
+                    src={logo}
                     className="img-fluid"
                     style={{ height: '50px' }}
-                    alt="Barber logo"
+                    alt="Company Logo"
                   />
                 </Navbar.Brand>
               </Offcanvas.Header>
