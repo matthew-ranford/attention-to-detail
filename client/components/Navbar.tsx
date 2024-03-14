@@ -20,10 +20,7 @@ const listVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1.8,
-      type: 'tween',
-      stiffness: 200,
-      damping: 20,
+      duration: 1.5,
     },
   },
 }
@@ -32,7 +29,13 @@ function Navigation() {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="background p-3">
+        <Navbar
+          key={expand}
+          expand={false}
+          collapseOnSelect
+          className="background"
+          fixed="top"
+        >
           <Container fluid="lg">
             <Navbar.Brand href="#">
               <h1 className="px-5 text-light">
@@ -96,7 +99,7 @@ function Navigation() {
               }}
             >
               <Navbar.Toggle
-                aria-controls={`offcanvasNavbar-expand-${expand}`}
+                aria-controls="responsive-navbar-nav"
                 className="px-4"
               >
                 <i className="bi bi-justify display-6 text-light"></i>
@@ -106,9 +109,10 @@ function Navigation() {
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              restoreFocus={false}
               style={{ width: '100%' }}
             >
-              <Navbar.Toggle closeButton>
+              <Navbar.Toggle closeButton aria-controls="responsive-navbar-nav">
                 <Navbar.Brand>
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -116,9 +120,14 @@ function Navigation() {
                     animate={{ opacity: 1 }}
                     style={{ backgroundColor: 'black' }}
                   >
-                    <h1 className="text-end text-light display-6 pe-1">
+                    <motion.h1
+                      className="text-end text-light display-6 pe-1"
+                      whileHover={{
+                        textShadow: '0px 0px 5px rgb(255, 255, 255)',
+                      }}
+                    >
                       Close
-                    </h1>
+                    </motion.h1>
                     <img
                       src={logo}
                       className="img-fluid"
