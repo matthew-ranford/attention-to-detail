@@ -5,10 +5,12 @@ import Projects from './Projects'
 import Gallery from './Gallery'
 import Contact from './Contact'
 import Footer from './Footer'
+import CarouselBackground from './Carousel'
 
 function App() {
   return (
     <>
+      <CarouselBackground />
       <Navigation />
       <div className="background">
         <About />

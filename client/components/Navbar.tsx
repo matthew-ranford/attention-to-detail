@@ -42,14 +42,14 @@ function Navigation() {
           key={expand}
           expand={false}
           collapseOnSelect
-          className="background"
+          // className="background"
+          // style={{ backgroundColor: 'rgb(0,0,0)' }}
           fixed="top"
         >
           <Container fluid="lg">
             <Navbar.Brand href="#">
-              <h1 className="px-5 text-light">
+              <h1 className="text-light">
                 <motion.div
-                  className="px-3"
                   initial={{ y: -50, opacity: 0, scale: 1.5 }}
                   animate={{ y: 0, opacity: 1, scale: 1 }}
                   transition={{
@@ -65,7 +65,6 @@ function Navigation() {
                   ttention
                 </motion.div>{' '}
                 <motion.div
-                  className="px-3"
                   initial={{ opacity: -1, scale: 700 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -81,8 +80,7 @@ function Navigation() {
                   o
                 </motion.div>{' '}
                 <motion.div
-                  className="px-3"
-                  initial={{ opacity: -1, scale: 1700 }}
+                  initial={{ opacity: -1, scale: 2500 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{
                     duration: 2,
