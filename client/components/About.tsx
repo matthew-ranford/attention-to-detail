@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 function About() {
   return (
     <>
-      <section id="about" className=" background">
+      <section id="about">
         <Container fluid="lg" className="pt-5 pb-5">
           <Row className="justify-content-center align-items-center reverse-col">
             <Col xs={12} md={6} className="lead text-light pt-5 mt-5">
