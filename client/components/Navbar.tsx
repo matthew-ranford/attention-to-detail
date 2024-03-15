@@ -8,6 +8,7 @@ import logo from '../images/atd-logo.png'
 
 // TODO:
 // Look at changing the font-size of the li items
+// Look at mapping through li items and rendering them with the stagger property
 
 const listVariants = {
   hidden: {
@@ -20,8 +21,16 @@ const listVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1.5,
+      duration: 1,
     },
+  },
+}
+
+const iconVariant = {
+  initial: { rotate: -90 },
+  animate: {
+    rotate: 0,
+    transition: { duration: 2 },
   },
 }
 
@@ -41,13 +50,10 @@ function Navigation() {
               <h1 className="px-5 text-light">
                 <motion.div
                   className="px-3"
-                  initial={{ y: -70, opacity: 0, scale: 0 }}
+                  initial={{ y: -50, opacity: 0, scale: 1.5 }}
                   animate={{ y: 0, opacity: 1, scale: 1 }}
                   transition={{
                     duration: 2,
-                    type: 'spring',
-                    stiffness: 200,
-                    damping: 10,
                   }}
                 >
                   <motion.span
@@ -60,10 +66,10 @@ function Navigation() {
                 </motion.div>{' '}
                 <motion.div
                   className="px-3"
-                  initial={{ y: -50, opacity: -1, scale: 0 }}
-                  animate={{ y: 0, opacity: 1, scale: 1 }}
+                  initial={{ opacity: -1, scale: 700 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{
-                    duration: 2.5,
+                    duration: 1.2,
                   }}
                 >
                   <motion.span
@@ -76,10 +82,10 @@ function Navigation() {
                 </motion.div>{' '}
                 <motion.div
                   className="px-3"
-                  initial={{ y: -150, opacity: -1, scale: 0 }}
-                  animate={{ y: 0, opacity: 1, scale: 1 }}
+                  initial={{ opacity: -1, scale: 1700 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{
-                    duration: 2.8,
+                    duration: 2,
                   }}
                 >
                   <motion.span
@@ -97,12 +103,18 @@ function Navigation() {
               whileHover={{
                 x: -3,
               }}
+              variants={iconVariant}
+              initial="initial"
+              animate="animate"
             >
               <Navbar.Toggle
                 aria-controls="responsive-navbar-nav"
                 className="px-4"
               >
-                <i className="bi bi-justify display-6 text-light"></i>
+                <motion.i
+                  className="bi bi-justify display-6"
+                  style={{ color: 'rgb(255, 255, 255)' }}
+                ></motion.i>
               </Navbar.Toggle>
             </motion.div>
             <Navbar.Offcanvas
@@ -118,21 +130,24 @@ function Navigation() {
                     initial={{ opacity: 0 }}
                     transition={{ ease: 'easeInOut', duration: 1.8 }}
                     animate={{ opacity: 1 }}
-                    style={{ backgroundColor: 'black' }}
+                    style={{ backgroundColor: 'rgb(0, 0, 0)' }}
                   >
                     <motion.h1
                       className="text-end text-light display-6 pe-1"
                       whileHover={{
-                        textShadow: '0px 0px 5px rgb(255, 255, 255)',
+                        textShadow: '0px 0px 10px rgb(255, 255, 255)',
                       }}
                     >
                       Close
                     </motion.h1>
-                    <img
+                    <motion.img
                       src={logo}
                       className="img-fluid"
                       style={{ height: '200px' }}
                       alt="Company Logo"
+                      initial={{ scale: 500 }}
+                      transition={{ duration: 0.8 }}
+                      animate={{ scale: 1 }}
                     />
                   </motion.div>
                 </Navbar.Brand>
