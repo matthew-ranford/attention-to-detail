@@ -5,11 +5,11 @@ function CarouselBackground() {
   return (
     <>
       <Carousel fade data-bs-theme="dark" controls={false} indicators={false}>
-        <Carousel.Item interval={3000}>
+        <Carousel.Item interval={5000}>
           <img
-            src="https://atd-decorators.co.nz/static/80070375_105547584557182_8749752288730975304_n-c16d4d1680e2a1eda4456ca8877f04d2.jpeg"
             className="img-fluid"
-            alt=""
+            src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
+            alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item interval={3000}>
@@ -21,9 +21,9 @@ function CarouselBackground() {
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <img
+            src="https://atd-decorators.co.nz/static/20210423_113253-bb31cde6de68a21ab03924c7d2017bfa.jpg"
             className="img-fluid"
-            src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
-            alt="Second slide"
+            alt=""
           />
         </Carousel.Item>
         <Carousel.Item interval={3000}>
