@@ -75,6 +75,7 @@ function Projects() {
                 show={showProjectOne}
                 onHide={handleCloseProjectOne}
                 animation={true}
+                centered={true}
                 style={{
                   backgroundColor: 'rgb(37, 37, 37, 0.95)',
                 }}
@@ -165,6 +166,7 @@ function Projects() {
                 show={showProjectTwo}
                 onHide={handleCloseProjectTwo}
                 animation={true}
+                centered={true}
                 style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
                 data-bs-theme="dark"
                 size="lg"
@@ -253,6 +255,7 @@ function Projects() {
                 show={showProjectThree}
                 onHide={handleCloseProjectThree}
                 animation={true}
+                centered={true}
                 style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
                 data-bs-theme="dark"
                 size="lg"
@@ -341,6 +344,7 @@ function Projects() {
                 show={showProjectFour}
                 onHide={handleCloseProjectFour}
                 animation={true}
+                centered={true}
                 style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
                 data-bs-theme="dark"
                 size="lg"
