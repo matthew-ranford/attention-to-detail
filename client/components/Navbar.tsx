@@ -43,7 +43,7 @@ function Navigation() {
           expand={false}
           collapseOnSelect
           // className="background"
-          // style={{ backgroundColor: 'rgb(0,0,0)' }}
+          style={{ background: 'transparent', backdropFilter: 'blur(2px)' }}
           fixed="top"
         >
           <Container fluid="lg">
