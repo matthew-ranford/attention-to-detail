@@ -42,7 +42,6 @@ function Navigation() {
           key={expand}
           expand={false}
           collapseOnSelect
-          // className="background"
           style={{ background: 'transparent', backdropFilter: 'blur(2px)' }}
           fixed="top"
         >

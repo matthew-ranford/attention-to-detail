@@ -10,8 +10,8 @@ function Contact() {
     <>
       <section id="contact" className="container mt-5">
         <div className="text-center">
-          <h1 className="text-primary mt-3">Contact us!</h1>
-          <p className="lead text-light mb-4 pb-3 pt-4">
+          <h1 className="text-primary mt-3 pt-5">Contact us!</h1>
+          <p className="lead text-light mb-4 pb-5 pt-4">
             Questions? Fill out the form to contact me directly!
           </p>
         </div>
@@ -59,7 +59,7 @@ function Contact() {
                 />
               </FloatingLabel>
               <div className="text-center">
-                <Button variant="primary" className="px-3 py-2 mb-3">
+                <Button variant="primary" className="px-3 py-2 mb-3 mt-3">
                   Submit
                 </Button>
               </div>

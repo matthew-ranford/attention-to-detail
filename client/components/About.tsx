@@ -36,7 +36,11 @@ function About() {
                 transition={{ duration: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
               >
-                <Button variant="primary" className="px-3 py-2 mt-3">
+                <Button
+                  variant="primary"
+                  className="px-3 py-2 mt-3"
+                  href="#contact"
+                >
                   Get a Quote
                 </Button>
               </motion.div>
