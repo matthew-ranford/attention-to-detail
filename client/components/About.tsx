@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 function About() {
   return (
     <>
-      <section id="about">
+      <section id="about" className="container pt-5">
         <Container fluid="lg" className="pt-5 pb-5">
           <Row className="justify-content-center align-items-center reverse-col">
             <Col xs={12} md={6} className="lead text-light pt-5 mt-5">
@@ -35,10 +35,11 @@ function About() {
                 initial={{ opacity: 0, y: 20 }}
                 transition={{ duration: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
+                className="pb-3"
               >
                 <Button
                   variant="primary"
-                  className="px-3 py-2 mt-3"
+                  className="px-3 py-2 mt-3 mb-3"
                   href="#contact"
                 >
                   Get a Quote
@@ -48,9 +49,9 @@ function About() {
 
             <Col xs={12} md={6} className="reverse-col">
               <motion.div
-                initial={{ opacity: -10 }}
+                initial={{ opacity: -10, x: 10 }}
                 transition={{ duration: 2 }}
-                whileInView={{ opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
               >
                 <motion.img
                   src="client/images/atd-logo.png"
