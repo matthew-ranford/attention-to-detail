@@ -11,12 +11,15 @@ function Contact() {
       <section id="contact" className="container mt-5">
         <div className="text-center">
           <h1 className="text-primary mt-3 pt-5">Contact us!</h1>
-          <p className="lead text-light mb-4 pb-5 pt-4">
+          <p className="lead text-light pt-4">
             Questions? Fill out the form to contact me directly!
+          </p>
+          <p className="lead text-light mb-4 pb-5 pt-4">
+            Alternatively, message or call Corey at one of the links below!
           </p>
         </div>
         <Container fluid="lg">
-          <Row className="justify-content-center align-items-center">
+          <Row className="">
             <Col xs={12} md={6}>
               <FloatingLabel
                 controlId="floatingName"
@@ -63,6 +66,53 @@ function Contact() {
                   Submit
                 </Button>
               </div>
+            </Col>
+
+            <Col className="text-center pt-5">
+              <h1 className="text-light pb-3 pt-5">Links</h1>
+              <Col xs={12} md={12} className="pb-3">
+                <div className="text-center">
+                  <a href="tel: 027 312 9323" aria-label="telephone number">
+                    <i className="bi bi-telephone display-6">
+                      <span className="text-light px-3 lead">
+                        +64 27-312-9323
+                      </span>
+                    </i>
+                  </a>
+                </div>
+              </Col>
+              <Col xs={12} md={12} className="pb-3">
+                <div className="text-center">
+                  <a
+                    href="https://www.facebook.com/attentiontodetaildecoratorsltd"
+                    aria-label="link to facebook page"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="bi bi-facebook display-6">
+                      <span className="text-light px-3 lead">
+                        Facebook Message
+                      </span>
+                    </i>
+                  </a>
+                </div>
+              </Col>
+              <Col xs={12} md={12} className="pb-3">
+                <div className="text-center">
+                  <a
+                    href="https://www.instagram.com/attentiontodetail_decorators/"
+                    aria-label="link to instagram page"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="bi bi-instagram display-6">
+                      <span className="text-light px-3 lead">
+                        Instgram Message
+                      </span>
+                    </i>
+                  </a>
+                </div>
+              </Col>
             </Col>
           </Row>
         </Container>
