@@ -19,7 +19,7 @@ function Contact() {
           </p>
         </div>
         <Container fluid="lg">
-          <Row className="">
+          <Row>
             <Col xs={12} md={6}>
               <FloatingLabel
                 controlId="floatingName"
@@ -69,20 +69,46 @@ function Contact() {
             </Col>
 
             <Col className="text-center pt-5">
-              <h1 className="text-light pb-3 pt-5">Links</h1>
+              <h1 className="text-light pb-3 pt-3">Links</h1>
               <Col xs={12} md={12} className="pb-3">
                 <a href="tel: 027 312 9323" aria-label="telephone number">
-                  <i className="bi bi-telephone display-6">
+                  <i className="bi bi-phone display-6">
                     <button
                       className="text-light px-3 lead"
                       style={{
                         textDecoration: 'none',
                         border: 'none',
                         background: 'none',
-                        marginLeft: '0.2rem',
+                        marginRight: '0.2rem',
                       }}
                     >
                       +64 27-312-9323
+                    </button>
+                  </i>
+                </a>
+              </Col>
+              <Col xs={12} md={12} className="pb-3">
+                <a
+                  href="mailto: atd.decorators@gmail.com"
+                  aria-label="link to instagram page"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="lead"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <i
+                    className="bi bi-envelope-at display-6"
+                    style={{ marginRight: '0.3rem' }}
+                  >
+                    <button
+                      className="text-light px-3 lead"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                      }}
+                    >
+                      Email me directly
                     </button>
                   </i>
                 </a>
@@ -101,7 +127,7 @@ function Contact() {
                         textDecoration: 'none',
                         border: 'none',
                         background: 'none',
-                        marginLeft: '0.2rem',
+                        marginLeft: '0.1rem',
                       }}
                     >
                       Facebook Message
@@ -110,32 +136,30 @@ function Contact() {
                 </a>
               </Col>
               <Col xs={12} md={12} className="pb-3">
-                <div className="text-center">
-                  <a
-                    href="https://www.instagram.com/attentiontodetail_decorators/"
-                    aria-label="link to instagram page"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="lead"
-                    style={{ textDecoration: 'none' }}
+                <a
+                  href="https://www.instagram.com/attentiontodetail_decorators/"
+                  aria-label="link to instagram page"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="lead"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <i
+                    className="bi bi-instagram display-6"
+                    style={{ marginLeft: '0.5rem' }}
                   >
-                    <i
-                      className="bi bi-instagram display-6"
-                      style={{ marginLeft: '0.4rem' }}
+                    <button
+                      className="text-light px-3 lead"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                      }}
                     >
-                      <button
-                        className="text-light px-3 lead"
-                        style={{
-                          textDecoration: 'none',
-                          border: 'none',
-                          background: 'none',
-                        }}
-                      >
-                        Instagram Message
-                      </button>
-                    </i>
-                  </a>
-                </div>
+                      Instagram Message
+                    </button>
+                  </i>
+                </a>
               </Col>
             </Col>
           </Row>
