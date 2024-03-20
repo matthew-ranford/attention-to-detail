@@ -10,8 +10,10 @@ import CarouselBackground from './Carousel'
 function App() {
   return (
     <>
+      <div className="navbar-container">
+        <Navigation />
+      </div>
       <CarouselBackground />
-      <Navigation />
       <div className="background">
         <About />
         <Services />

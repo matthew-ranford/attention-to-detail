@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 function Footer() {
   return (
     <Container className="mt-5 pt-5">
-      <Row className="">
+      <Row className="pt-5 mt-5">
         <Col xs={12} md={12}>
           <h1 className="text-light">
             <a

@@ -45,6 +45,15 @@ button.btn-close {
   visibility: visible;
 }
 
+/* TO HAVE THE NAVBAR ON TOP OF THE CAROUSEL */
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
 /* SERVICES SECTION */
 @media (max-width: 768px) {
   /* SERVICES SECTION - IMAGES */

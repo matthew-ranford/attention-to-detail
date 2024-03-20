@@ -38,13 +38,7 @@ function Navigation() {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar
-          key={expand}
-          expand={false}
-          collapseOnSelect
-          style={{ background: 'transparent', backdropFilter: 'blur(2px)' }}
-          fixed="top"
-        >
+        <Navbar key={expand} expand={false} collapseOnSelect>
           <Container fluid="lg">
             <Navbar.Brand href="#">
               <h1 className="text-light">
