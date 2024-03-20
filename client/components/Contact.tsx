@@ -52,7 +52,7 @@ function Contact() {
 
               <FloatingLabel
                 controlId="floatingTextarea"
-                label="Comments"
+                label="Message"
                 className="mb-3"
               >
                 <Form.Control
@@ -71,31 +71,43 @@ function Contact() {
             <Col className="text-center pt-5">
               <h1 className="text-light pb-3 pt-5">Links</h1>
               <Col xs={12} md={12} className="pb-3">
-                <div className="text-center">
-                  <a href="tel: 027 312 9323" aria-label="telephone number">
-                    <i className="bi bi-telephone display-6">
-                      <span className="text-light px-3 lead">
-                        +64 27-312-9323
-                      </span>
-                    </i>
-                  </a>
-                </div>
+                <a href="tel: 027 312 9323" aria-label="telephone number">
+                  <i className="bi bi-telephone display-6">
+                    <button
+                      className="text-light px-3 lead"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        marginLeft: '0.2rem',
+                      }}
+                    >
+                      +64 27-312-9323
+                    </button>
+                  </i>
+                </a>
               </Col>
               <Col xs={12} md={12} className="pb-3">
-                <div className="text-center">
-                  <a
-                    href="https://www.facebook.com/attentiontodetaildecoratorsltd"
-                    aria-label="link to facebook page"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="bi bi-facebook display-6">
-                      <span className="text-light px-3 lead">
-                        Facebook Message
-                      </span>
-                    </i>
-                  </a>
-                </div>
+                <a
+                  href="https://www.facebook.com/attentiontodetaildecoratorsltd"
+                  aria-label="link to facebook page"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="bi bi-facebook display-6">
+                    <button
+                      className="text-light px-3 lead"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        marginLeft: '0.2rem',
+                      }}
+                    >
+                      Facebook Message
+                    </button>
+                  </i>
+                </a>
               </Col>
               <Col xs={12} md={12} className="pb-3">
                 <div className="text-center">
@@ -104,11 +116,23 @@ function Contact() {
                     aria-label="link to instagram page"
                     target="_blank"
                     rel="noreferrer"
+                    className="lead"
+                    style={{ textDecoration: 'none' }}
                   >
-                    <i className="bi bi-instagram display-6">
-                      <span className="text-light px-3 lead">
-                        Instgram Message
-                      </span>
+                    <i
+                      className="bi bi-instagram display-6"
+                      style={{ marginLeft: '0.4rem' }}
+                    >
+                      <button
+                        className="text-light px-3 lead"
+                        style={{
+                          textDecoration: 'none',
+                          border: 'none',
+                          background: 'none',
+                        }}
+                      >
+                        Instagram Message
+                      </button>
                     </i>
                   </a>
                 </div>
