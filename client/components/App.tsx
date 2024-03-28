@@ -1,19 +1,15 @@
-import Navigation from './Navbar'
 import About from './About'
 import Services from './Services'
 import Projects from './Projects'
 import Gallery from './Gallery'
 import Contact from './Contact'
 import Footer from './Footer'
-import CarouselBackground from './Carousel'
+import Loader from './Loader'
 
 function App() {
   return (
     <>
-      <div className="navbar-container">
-        <Navigation />
-      </div>
-      <CarouselBackground />
+      <Loader />
       <div className="background">
         <About />
         <Services />

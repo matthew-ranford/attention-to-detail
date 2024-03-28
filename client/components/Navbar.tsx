@@ -133,8 +133,8 @@ function Navigation() {
                     </motion.h1>
                     <motion.img
                       src={logo}
-                      className="img-fluid"
-                      style={{ height: '200px' }}
+                      className="img-fluid "
+                      style={{ height: '200px', margin: 'auto' }}
                       alt="Company Logo"
                       initial={{ scale: 500 }}
                       transition={{ duration: 0.8 }}
