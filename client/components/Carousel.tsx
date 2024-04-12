@@ -1,50 +1,90 @@
-// import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel'
-import Ratio from 'react-bootstrap/Ratio'
 
-// Testing out ratios to try and get the images closer to 100vh
+import image0 from '../images/carousel-0.png'
+import image13 from '../images/carousel-13.png'
+import image2 from '../images/carousel-2.png'
+import image4 from '../images/carousel-4.png'
+import image12 from '../images/carousel-12.png'
+import image5 from '../images/carousel-5.png'
+import image11 from '../images/carousel-11.png'
+import image14 from '../images/carousel-14.png'
+import image7 from '../images/carousel-7.png'
+import image8 from '../images/carousel-8.png'
+import image10 from '../images/carousel-10.png'
+import image6 from '../images/carousel-6.png'
+
+const carouselImages = [
+  {
+    id: 1,
+    image: image0,
+  },
+  {
+    id: 2,
+    image: image13,
+  },
+  {
+    id: 3,
+    image: image2,
+  },
+  {
+    id: 4,
+    image: image4,
+  },
+  {
+    id: 5,
+    image: image12,
+  },
+  {
+    id: 6,
+    image: image5,
+  },
+  {
+    id: 7,
+    image: image11,
+  },
+  {
+    id: 8,
+    image: image14,
+  },
+  {
+    id: 9,
+    image: image7,
+  },
+  {
+    id: 10,
+    image: image8,
+  },
+  {
+    id: 11,
+    image: image10,
+  },
+  {
+    id: 12,
+    image: image6,
+  },
+]
 
 function CarouselBackground() {
   return (
     <>
       <section id="home">
-        <Carousel fade data-bs-theme="dark" controls={false} indicators={false}>
-          <Carousel.Item interval={3000}>
-            <Ratio aspectRatio="16x9">
-              <img
-                src="https://atd-decorators.co.nz/static/80070375_105547584557182_8749752288730975304_n-c16d4d1680e2a1eda4456ca8877f04d2.jpeg"
-                className="img-fluid"
-                alt=""
-              />
-            </Ratio>
-          </Carousel.Item>
-          <Carousel.Item interval={3000}>
-            <Ratio aspectRatio="16x9">
-              <img
-                className="img-fluid"
-                src="https://atd-decorators.co.nz/static/20210422_142201-e03303898ede8ce2fe0d4811632af8b3.jpg"
-                alt="First slide"
-              />
-            </Ratio>
-          </Carousel.Item>
-          <Carousel.Item interval={3000}>
-            <Ratio aspectRatio="16x9">
-              <img
-                className="img-fluid"
-                src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
-                alt="Second slide"
-              />
-            </Ratio>
-          </Carousel.Item>
-          <Carousel.Item interval={3000}>
-            <Ratio aspectRatio="16x9">
-              <img
-                className="img-fluid"
-                src="https://atd-decorators.co.nz/static/20210316_153408-f71593f2203bcf6095c70c178f5dd80a.jpg"
-                alt="Third slide"
-              />
-            </Ratio>
-          </Carousel.Item>
+        <Carousel
+          fade={true}
+          controls={false}
+          indicators={false}
+          interval={3000}
+        >
+          {carouselImages.map((image) => {
+            return (
+              <Carousel.Item key={image.id}>
+                <img
+                  src={image.image}
+                  className="d-block w-100"
+                  alt={'Slide image' + image.id}
+                />
+              </Carousel.Item>
+            )
+          })}
         </Carousel>
       </section>
     </>
