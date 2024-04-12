@@ -1,13 +1,22 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Modal from 'react-bootstrap/Modal'
+
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 import newBuildImage from '../images/atd-services/services-0.png'
 import renovationImage from '../images/atd-services/services-1.png'
 import waterblastingImage from '../images/atd-services/services-2.png'
+import renovationVideo from '../images/atd-services/spray-video.mp4'
 
 function Services() {
+  const [showRenovationModal, setShowRenovationModal] = useState(false)
+
+  const handleCloseModal = () => setShowRenovationModal(false)
+  const handleShowModal = () => setShowRenovationModal(true)
+
   return (
     <>
       <section id="services" className="container pb-5 mb-5">
@@ -69,7 +78,7 @@ function Services() {
                   warmth, transforming bare walls into welcoming spaces. From
                   choosing the perfect palette to executing flawless finishes, I
                   ensure every corner reflects the vision and aspirations of its
-                  future inhabitants. It's not just about painting walls; it's
+                  future inhabitants. It is not just about painting walls; it is
                   about crafting havens where memories are born and cherished
                   for years to come.
                 </p>
@@ -105,9 +114,11 @@ function Services() {
             </Col>
             <Col xs={12} md={6}>
               <motion.img
+                onClick={handleShowModal}
+                aria-hidden="true"
                 src={renovationImage}
                 className="img-fluid mt-5 mb-5"
-                style={{ borderRadius: '8%' }}
+                style={{ borderRadius: '8%', cursor: 'pointer' }}
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
@@ -119,6 +130,35 @@ function Services() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
               />
+              <Modal
+                show={showRenovationModal}
+                onHide={handleCloseModal}
+                animation={true}
+                centered={true}
+                style={{
+                  backgroundColor: 'rgb(37, 37, 37, 0.95)',
+                }}
+                data-bs-theme="dark"
+                size="lg"
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 1.5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <Modal.Header closeButton>
+                    <Modal.Title className="text-primary">
+                      <h2 className="px-2">Spray unit in action</h2>
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body className="background">
+                    <video controls autoPlay style={{ borderRadius: '5%' }}>
+                      <track kind="captions" label="Spray Video" />
+                      <source src={renovationVideo} type="video/mp4" />
+                    </video>
+                  </Modal.Body>
+                </motion.div>
+              </Modal>
             </Col>
           </Row>
           <Row className="justify-content-center align-items-center pt-5">
@@ -154,10 +194,10 @@ function Services() {
               >
                 <h2 className="text-primary pt-3">Waterblasting</h2>
                 <p className="lead text-light pb-3">
-                  Waterblasting homes is like wielding nature's power to unveil
+                  Waterblasting homes is like wielding natures power to unveil
                   their true essence. With high-pressure streams, I strip away
                   layers of grime and weathered memories, revealing pristine
-                  surfaces beneath. It's not just about cleanliness, but
+                  surfaces beneath. It is not just about cleanliness, but
                   restoring dignity to each facade, breathing new vitality into
                   tired exteriors. With precision and care, I harness the force
                   of water to rejuvenate homes, leaving behind a refreshed
