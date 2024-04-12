@@ -37,14 +37,14 @@ button.btn-close {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 50px;
-  background-color: #f8d04094;
+  height: 5px;
+  background-color: #ffb700;
   visibility: hidden;
   transition: 0.6s ease-in-out;
 }
 
 .nav-link:hover::before {
-  width: 100%;
+  width: 25%;
   visibility: visible;
 }
 
