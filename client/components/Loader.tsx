@@ -52,7 +52,7 @@ function Loader() {
             width={400}
           />
         </div>
-        <DelayedRender delay={3500}>
+        <DelayedRender delay={2500}>
           <div className="navbar-container">
             <Navigation />
           </div>

@@ -8,11 +8,11 @@ function About() {
   return (
     <>
       <section id="about" className="container pt-5">
-        <Container fluid="lg" className="pt-5 pb-5">
+        <Container fluid="lg" className="pb-5">
           <Row className="justify-content-center align-items-center reverse-col">
             <Col xs={12} md={6} className="lead text-light pt-5 mt-5">
               <motion.div
-                initial={{ opacity: 0, x: -10 }}
+                initial={{ opacity: 0, x: -5 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
               >
@@ -32,7 +32,7 @@ function About() {
                 <p>The ATD team work all across the Wellington region.</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 5 }}
                 transition={{ duration: 1 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 className="pb-3"
@@ -53,15 +53,10 @@ function About() {
                 transition={{ duration: 2 }}
                 whileInView={{ x: 0, opacity: 1 }}
               >
-                <motion.img
+                <img
                   src="client/images/atd-logo.png"
                   className="img-fluid"
                   alt="Company logo"
-                  initial={{ opacity: -1, scale: 25 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 2,
-                  }}
                 />
               </motion.div>
             </Col>

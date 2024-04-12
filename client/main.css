@@ -62,5 +62,6 @@ button.btn-close {
   /* SERVICES SECTION - IMAGES */
   .reverse-col {
     flex-direction: column-reverse;
+    text-align: center;
   }
 }
