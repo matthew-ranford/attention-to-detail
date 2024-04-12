@@ -17,7 +17,7 @@ function Loader() {
       })
         .from(['#title-logo'], {
           opacity: 0,
-          scale: 10,
+          scale: 3,
         })
         .to(['#title-logo'], {
           opacity: 0,

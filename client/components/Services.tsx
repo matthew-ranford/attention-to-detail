@@ -3,21 +3,25 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { motion } from 'framer-motion'
 
+import newBuildImage from '../images/atd-services/services-0.png'
+import renovationImage from '../images/atd-services/services-1.png'
+import waterblastingImage from '../images/atd-services/services-2.png'
+
 function Services() {
   return (
     <>
       <section id="services" className="container pb-5 mb-5">
         <div className="text-center">
           <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.5 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
             <h1 className="text-primary mt-3 pt-5">Services</h1>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.5 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
             <p className="lead text-light mb-4 pb-5 pt-4">
@@ -29,87 +33,135 @@ function Services() {
           <Row className="justify-content-center align-items-center">
             <Col xs={12} md={6}>
               <motion.img
-                src="https://atd-decorators.co.nz/static/20210316_153408-f71593f2203bcf6095c70c178f5dd80a.jpg"
-                className="img-fluid"
-                style={{ borderRadius: '5%' }}
+                src={newBuildImage}
+                className="img-fluid mb-5"
+                style={{ borderRadius: '8%' }}
                 alt=""
-                initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, x: -50 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
             </Col>
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="center-text"
               >
                 <h2 className="text-primary pt-3">New Builds</h2>
-                <p className="lead text-light pb-3">
-                  Whether you need a fresh coat of paint to spruce up your
-                  exisiting home or colour advice to shape your new one.
-                  Attention to Detail Decorators are here for all of your
-                  interior & exterior painting needs.
+                <p className="lead text-light pb-5">
+                  Painting new build homes is like adding the final brushstroke
+                  to a blank canvas, bringing architectural dreams to life. With
+                  each stroke, I imbue fresh structures with personality and
+                  warmth, transforming bare walls into welcoming spaces. From
+                  choosing the perfect palette to executing flawless finishes, I
+                  ensure every corner reflects the vision and aspirations of its
+                  future inhabitants. It's not just about painting walls; it's
+                  about crafting havens where memories are born and cherished
+                  for years to come.
                 </p>
               </motion.div>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center reverse-col">
+          <Row className="justify-content-center align-items-center reverse-col pt-5">
             <Col xs={12} md={6}>
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, x: -50 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="center-text"
               >
                 <h2 className="text-primary pt-3">Renovations</h2>
                 <p className="lead text-light pb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                  repudiandae quas sapiente magni ea quod tempora, ut
-                  voluptatibus vel provident nobis laboriosam at eum, optio
-                  molestiae. Adipisci nesciunt delectus, necessitatibus esse
-                  perferendis doloremque magni, est cum distinctio, consequatur
-                  praesentium voluptatem!
+                  Home renovations are my artistic playground, where walls
+                  whisper tales of transformation. Armed with brushes and
+                  palettes, I infuse each space with personality and vibrancy,
+                  turning mundane rooms into captivating canvases. From soothing
+                  neutrals to bold bursts of color, I wield my craft to evoke
+                  emotions and elevate atmospheres. With meticulous precision
+                  and boundless creativity, I bring dreams to life, one stroke
+                  at a time.
                 </p>
               </motion.div>
             </Col>
             <Col xs={12} md={6}>
               <motion.img
-                src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
-                className="img-fluid"
-                style={{ borderRadius: '5%' }}
+                src={renovationImage}
+                className="img-fluid mt-5 mb-5"
+                style={{ borderRadius: '8%' }}
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center">
+          <Row className="justify-content-center align-items-center pt-5">
             <Col xs={12} md={6}>
               <motion.img
-                src="https://atd-decorators.co.nz/static/20210422_142201-e03303898ede8ce2fe0d4811632af8b3.jpg"
-                className="img-fluid"
-                style={{ borderRadius: '5%' }}
+                src={waterblastingImage}
+                className="img-fluid mt-5 mb-5"
+                style={{ borderRadius: '8%' }}
                 alt=""
-                initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, x: -50 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
             </Col>
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="center-text"
               >
                 <h2 className="text-primary pt-3">Waterblasting</h2>
                 <p className="lead text-light pb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                  repudiandae quas sapiente magni ea quod tempora, ut
-                  voluptatibus vel provident nobis laboriosam at eum, optio
-                  molestiae. Adipisci nesciunt delectus, necessitatibus esse
-                  perferendis doloremque magni, est cum distinctio, consequatur
-                  praesentium voluptatem!
+                  Waterblasting homes is like wielding nature's power to unveil
+                  their true essence. With high-pressure streams, I strip away
+                  layers of grime and weathered memories, revealing pristine
+                  surfaces beneath. It's not just about cleanliness, but
+                  restoring dignity to each facade, breathing new vitality into
+                  tired exteriors. With precision and care, I harness the force
+                  of water to rejuvenate homes, leaving behind a refreshed
+                  canvas ready for new stories to unfold.
                 </p>
               </motion.div>
             </Col>

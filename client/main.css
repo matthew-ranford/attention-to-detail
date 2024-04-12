@@ -64,4 +64,8 @@ button.btn-close {
     flex-direction: column-reverse;
     text-align: center;
   }
+
+  .center-text {
+    text-align: center;
+  }
 }
