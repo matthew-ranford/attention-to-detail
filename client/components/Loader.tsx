@@ -52,12 +52,10 @@ function Loader() {
             width={400}
           />
         </div>
-
         <DelayedRender delay={3500}>
           <div className="navbar-container">
             <Navigation />
           </div>
-
           <CarouselBackground />
         </DelayedRender>
       </div>
