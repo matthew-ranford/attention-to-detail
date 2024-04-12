@@ -1,19 +1,10 @@
-import { useLayoutEffect, useRef, useState, useEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Navigation from './Navbar'
 import CarouselBackground from './Carousel'
+import DelayedRender from './DelayedRender'
 
 function Loader() {
-  const [showApp, setShowApp] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowApp(true)
-    }, 5000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   const comp = useRef(null)
 
   useLayoutEffect(() => {
@@ -61,12 +52,14 @@ function Loader() {
             width={400}
           />
         </div>
-        {showApp && (
+
+        <DelayedRender delay={3500}>
           <div className="navbar-container">
             <Navigation />
           </div>
-        )}
-        {showApp && <CarouselBackground />}
+
+          <CarouselBackground />
+        </DelayedRender>
       </div>
     </>
   )
