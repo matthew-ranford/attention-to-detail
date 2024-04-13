@@ -55,7 +55,7 @@ function About() {
               >
                 <img
                   src="client/images/atd-logo.png"
-                  className="img-fluid"
+                  className="img-fluid px-5"
                   alt="Company logo"
                 />
               </motion.div>

@@ -33,7 +33,7 @@ function Services() {
             transition={{ duration: 0.5 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <p className="lead text-light mb-4 pb-5 pt-4">
+            <p className="lead text-light mb-5 pb-5 pt-4">
               Checkout the services we offer before reaching out for a quote!
             </p>
           </motion.div>
@@ -165,7 +165,7 @@ function Services() {
             <Col xs={12} md={6}>
               <motion.img
                 src={waterblastingImage}
-                className="img-fluid mt-5 mb-5"
+                className="img-fluid mt-5 mb-5 pt-3"
                 style={{ borderRadius: '8%' }}
                 alt=""
                 initial={{ opacity: 0, x: -50 }}
