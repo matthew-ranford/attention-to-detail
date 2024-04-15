@@ -12,6 +12,8 @@ import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-p
 import projectTwoImages from '../projectTwoImageData'
 import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.png'
 import projectThreeImages from '../projectThreeImageData'
+import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.png'
+import projectFourImages from '../projectFourImageData'
 
 function Projects() {
   const [showProjectOne, setShowProjectOne] = useState(false)
@@ -76,6 +78,7 @@ function Projects() {
                 initial={{ opacity: 0, x: -20 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
               />
 
               <Modal
@@ -146,6 +149,7 @@ function Projects() {
                 initial={{ opacity: 0, x: 20 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
               />
 
               <Modal
@@ -200,7 +204,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-4 pb-4">
+                <h2 className="text-primary text-center pt-3 pb-3">
                   Waikanae Hills
                 </h2>
               </motion.div>
@@ -214,6 +218,7 @@ function Projects() {
                 initial={{ opacity: 0, x: -20 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
               />
 
               <Modal
@@ -268,20 +273,21 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-4 pb-4">
-                  Project Four
+                <h2 className="text-primary text-center pt-3 pb-3">
+                  John Allen
                 </h2>
               </motion.div>
               <motion.img
                 onClick={handleShowProjectFour}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '5%' }}
-                src="https://atd-decorators.co.nz/static/20210316_153408-f71593f2203bcf6095c70c178f5dd80a.jpg"
+                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                src={mainProjectFourImage}
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
                 transition={{ duration: 1 }}
                 whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
               />
 
               <Modal
@@ -300,7 +306,7 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">Project Four</h2>
+                      <h2 className="px-2">John Allen</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -310,39 +316,18 @@ function Projects() {
                       corporis itaque maxime neque ab.
                     </p>
 
-                    <Carousel fade>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/80070375_105547584557182_8749752288730975304_n-c16d4d1680e2a1eda4456ca8877f04d2.jpeg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210422_142201-e03303898ede8ce2fe0d4811632af8b3.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>{' '}
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210316_153408-f71593f2203bcf6095c70c178f5dd80a.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
+                    <Carousel fade={true}>
+                      {projectFourImages.map((image) => {
+                        return (
+                          <Carousel.Item key={image.id}>
+                            <img
+                              src={image.image}
+                              alt={'Project One image' + image.id}
+                              style={{ borderRadius: '2%' }}
+                            />
+                          </Carousel.Item>
+                        )
+                      })}
                     </Carousel>
                   </Modal.Body>
                 </motion.div>
