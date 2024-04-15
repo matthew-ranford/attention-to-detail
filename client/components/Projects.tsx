@@ -16,6 +16,8 @@ import mainProjectFourImage from '../images/atd-projects-project-four/main-image
 import projectFourImages from '../projectFourImageData'
 import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.png'
 import projectFiveImages from '../projectFiveImageData'
+import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.png'
+import projectSixImages from '../projectSixImageData'
 
 function Projects() {
   const [showProjectOne, setShowProjectOne] = useState(false)
@@ -23,6 +25,7 @@ function Projects() {
   const [showProjectThree, setShowProjectThree] = useState(false)
   const [showProjectFour, setShowProjectFour] = useState(false)
   const [showProjectFive, setShowProjectFive] = useState(false)
+  const [showProjectSix, setShowProjectSix] = useState(false)
 
   const handleCloseProjectOne = () => setShowProjectOne(false)
   const handleShowProjectOne = () => setShowProjectOne(true)
@@ -38,6 +41,9 @@ function Projects() {
 
   const handleCloseProjectFive = () => setShowProjectFive(false)
   const handleShowProjectFive = () => setShowProjectFive(true)
+
+  const handleCloseProjectSix = () => setShowProjectSix(false)
+  const handleShowProjectSix = () => setShowProjectSix(true)
 
   return (
     <>
@@ -396,6 +402,73 @@ function Projects() {
                             <img
                               src={image.image}
                               alt={'Project five image' + image.id}
+                              style={{ borderRadius: '2%' }}
+                            />
+                          </Carousel.Item>
+                        )
+                      })}
+                    </Carousel>
+                  </Modal.Body>
+                </motion.div>
+              </Modal>
+            </Col>
+
+            {/* ----------- SIXTH PROJECT INFO ----------- */}
+
+            <Col xs={12} md={6}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1 }}
+              >
+                <h2 className="text-primary text-center pt-3 pb-3">Raumati</h2>
+              </motion.div>
+              <motion.img
+                onClick={handleShowProjectSix}
+                aria-hidden="true"
+                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                src={mainProjectSixImage}
+                className="img-fluid"
+                alt=""
+                initial={{ opacity: 0, x: 20 }}
+                transition={{ duration: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                whileHover={{ scale: 1.05 }}
+              />
+
+              <Modal
+                show={showProjectSix}
+                onHide={handleCloseProjectSix}
+                animation={true}
+                centered={true}
+                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                data-bs-theme="dark"
+                size="lg"
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 1.5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <Modal.Header closeButton>
+                    <Modal.Title className="text-primary">
+                      <h2 className="px-2">Raumati</h2>
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body className="background">
+                    <p className="lead text-light">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Exercitationem illo possimus quo expedita soluta similique
+                      corporis itaque maxime neque ab.
+                    </p>
+
+                    <Carousel fade={true}>
+                      {projectSixImages.map((image) => {
+                        return (
+                          <Carousel.Item key={image.id}>
+                            <img
+                              src={image.image}
+                              alt={'Project six image' + image.id}
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
