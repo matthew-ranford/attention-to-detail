@@ -8,6 +8,8 @@ import { motion } from 'framer-motion'
 
 import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.png'
 import projectOneImages from '../projectOneImageData'
+import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.png'
+import projectTwoImages from '../projectTwoImageData'
 
 function Projects() {
   const [showProjectOne, setShowProjectOne] = useState(false)
@@ -129,14 +131,14 @@ function Projects() {
                 whileInView={{ opacity: 1 }}
               >
                 <h2 className="text-primary text-center pt-3 pb-3">
-                  Project Two
+                  Oriental Bay
                 </h2>
               </motion.div>
               <motion.img
                 onClick={handleShowProjectTwo}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '5%' }}
-                src="https://atd-decorators.co.nz/static/20210422_142201-e03303898ede8ce2fe0d4811632af8b3.jpg"
+                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                src={mainProjectTwoImage}
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
@@ -160,7 +162,7 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">Project Two</h2>
+                      <h2 className="px-2">Oriental Bay</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -170,39 +172,18 @@ function Projects() {
                       corporis itaque maxime neque ab.
                     </p>
 
-                    <Carousel fade>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/80070375_105547584557182_8749752288730975304_n-c16d4d1680e2a1eda4456ca8877f04d2.jpeg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210422_142201-e03303898ede8ce2fe0d4811632af8b3.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>{' '}
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210316_151036-8ed556b3d31fbcc3362ca47516170222.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          src="https://atd-decorators.co.nz/static/20210316_153408-f71593f2203bcf6095c70c178f5dd80a.jpg"
-                          className="img-fluid"
-                          alt=""
-                          style={{ borderRadius: '5%' }}
-                        />
-                      </Carousel.Item>
+                    <Carousel fade={true}>
+                      {projectTwoImages.map((image) => {
+                        return (
+                          <Carousel.Item key={image.id}>
+                            <img
+                              src={image.image}
+                              alt={'Project One image' + image.id}
+                              style={{ borderRadius: '2%' }}
+                            />
+                          </Carousel.Item>
+                        )
+                      })}
                     </Carousel>
                   </Modal.Body>
                 </motion.div>
