@@ -50,15 +50,15 @@ function Projects() {
       <section id="projects" className="container pb-5 mb-5">
         <div className="text-center">
           <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.5 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
             <h1 className="text-primary mt-3 pt-5">Projects</h1>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.5 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
             <p className="lead text-light mb-4 pb-5 pt-4">
@@ -88,9 +88,15 @@ function Projects() {
                 className="img-fluid"
                 alt="first project"
                 initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
@@ -159,9 +165,15 @@ function Projects() {
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
@@ -228,9 +240,15 @@ function Projects() {
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: -20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
@@ -297,9 +315,15 @@ function Projects() {
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
@@ -363,10 +387,16 @@ function Projects() {
                 src={mainProjectFiveImage}
                 className="img-fluid"
                 alt=""
-                initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, x: -20 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
@@ -431,9 +461,15 @@ function Projects() {
                 className="img-fluid"
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
-                transition={{ duration: 1 }}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 8,
+                }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
+                viewport={{ once: true, amount: 0.5 }}
               />
 
               <Modal
