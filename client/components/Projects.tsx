@@ -76,7 +76,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">
+                <h2 className="text-primary text-center pt-5 pb-5">
                   John Tocker
                 </h2>
               </motion.div>
@@ -87,12 +87,12 @@ function Projects() {
                 src={mainProjectOneImage}
                 className="img-fluid"
                 alt="first project"
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
@@ -153,7 +153,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">
+                <h2 className="text-primary text-center pt-5 pb-5">
                   Oriental Bay
                 </h2>
               </motion.div>
@@ -166,10 +166,10 @@ function Projects() {
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
@@ -228,7 +228,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">
+                <h2 className="text-primary text-center pt-5 pb-5">
                   Waikanae Hills
                 </h2>
               </motion.div>
@@ -239,12 +239,12 @@ function Projects() {
                 src={mainProjectThreeImage}
                 className="img-fluid"
                 alt=""
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
@@ -303,7 +303,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">
+                <h2 className="text-primary text-center pt-5 pb-5">
                   John Allen
                 </h2>
               </motion.div>
@@ -316,10 +316,10 @@ function Projects() {
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
@@ -378,7 +378,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">Deano</h2>
+                <h2 className="text-primary text-center pt-5 pb-5">Deano</h2>
               </motion.div>
               <motion.img
                 onClick={handleShowProjectFive}
@@ -387,12 +387,12 @@ function Projects() {
                 src={mainProjectFiveImage}
                 className="img-fluid"
                 alt=""
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
@@ -451,7 +451,7 @@ function Projects() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <h2 className="text-primary text-center pt-3 pb-3">Raumati</h2>
+                <h2 className="text-primary text-center pt-5 pb-5">Raumati</h2>
               </motion.div>
               <motion.img
                 onClick={handleShowProjectSix}
@@ -462,10 +462,10 @@ function Projects() {
                 alt=""
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 2,
                   type: 'spring',
-                  stiffness: 100,
-                  damping: 8,
+                  stiffness: 50,
+                  damping: 15,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
