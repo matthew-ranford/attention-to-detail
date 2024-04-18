@@ -2,7 +2,8 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel'
 import { motion } from 'framer-motion'
 
-import galleryImages from '../galleryData'
+import galleryExteriorImages from '../galleryExteriorData'
+import galleryInteriorImages from '../galleryInteriorData'
 
 function Gallery() {
   return (
@@ -27,13 +28,39 @@ function Gallery() {
           </motion.div>
         </div>
         <Container fluid="lg" className="pt-3">
+          <h1 className="text-primary pt-3 pb-5 text-center">
+            Exterior Painting
+          </h1>
           <motion.div
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
           >
             <Carousel data-bs-theme="dark">
-              {galleryImages.map((image) => {
+              {galleryExteriorImages.map((image) => {
+                return (
+                  <Carousel.Item key={image.id}>
+                    <img
+                      src={image.image}
+                      className="d-block w-100"
+                      style={{ borderRadius: '8%' }}
+                      alt={'Slide image' + image.id}
+                    />
+                  </Carousel.Item>
+                )
+              })}
+            </Carousel>
+          </motion.div>
+          <h1 className="text-primary pt-5 pb-5 text-center">
+            Interior Painting & Decorating
+          </h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            whileInView={{ opacity: 1 }}
+          >
+            <Carousel data-bs-theme="dark">
+              {galleryInteriorImages.map((image) => {
                 return (
                   <Carousel.Item key={image.id}>
                     <img
