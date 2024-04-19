@@ -37,7 +37,13 @@ function Navigation() {
         <Navbar key={expand} expand={false} collapseOnSelect>
           <Container fluid="lg">
             <Navbar.Brand href="#">
-              <img src={logo} alt="Attention To Detail Logo" width={100} />
+              <img
+                src={logo}
+                alt="Attention To Detail Logo"
+                width={100}
+                loading="lazy"
+                decoding="async"
+              />
             </Navbar.Brand>
             <motion.div>
               <Navbar.Toggle

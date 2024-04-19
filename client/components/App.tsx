@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Loader />
-      <DelayedRender delay={1500}>
+      <DelayedRender delay={115}>
         <div className="background">
           <About />
           <Services />

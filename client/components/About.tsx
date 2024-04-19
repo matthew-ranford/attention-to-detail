@@ -57,6 +57,8 @@ function About() {
                   src="client/images/atd-logo.png"
                   className="img-fluid px-5"
                   alt="Company logo"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             </Col>

@@ -10,7 +10,7 @@ function CarouselBackground() {
           fade={true}
           controls={false}
           indicators={false}
-          interval={3000}
+          interval={3500}
         >
           {carouselImages.map((image) => {
             return (
@@ -19,6 +19,8 @@ function CarouselBackground() {
                   src={image.image}
                   className="d-block w-100"
                   alt={'Slide image' + image.id}
+                  rel="preload"
+                  loading="eager"
                 />
               </Carousel.Item>
             )

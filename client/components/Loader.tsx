@@ -13,7 +13,7 @@ function Loader() {
       t1.from('#intro-slider', {
         xPercent: '0',
         opacity: 0,
-        duration: 1,
+        duration: 0.05,
       })
         .from(['#title-logo'], {
           opacity: 0,
@@ -23,13 +23,13 @@ function Loader() {
           opacity: 0,
           scale: 1,
           x: '-=250',
-          delay: 1.2,
-          duration: 0.7,
+          delay: 0.5,
+          duration: 0.25,
         })
-        .to('#intro-slider', { xPercent: '-100', duration: 0.5 })
+        .to('#intro-slider', { xPercent: '-100', duration: 0.15 })
         .from('#main-layout', {
           opacity: 1,
-          duration: 0.5,
+          duration: 0.15,
         })
     }, comp)
     return () => context.revert()
@@ -48,11 +48,13 @@ function Loader() {
             src="client/images/atd-logo.png"
             className="img-fluid pt-5"
             alt="Company logo"
+            loading="eager"
+            rel="preload"
             height={400}
             width={400}
           />
         </div>
-        <DelayedRender delay={2500}>
+        <DelayedRender delay={115}>
           <div className="navbar-container">
             <Navigation />
           </div>
