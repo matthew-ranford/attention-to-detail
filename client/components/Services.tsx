@@ -45,7 +45,9 @@ function Services() {
                 src={newBuildImage}
                 className="img-fluid mb-5"
                 style={{ borderRadius: '8%' }}
-                alt=""
+                alt="Exterior painted new build home"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 1.5,
@@ -119,7 +121,9 @@ function Services() {
                 src={renovationImage}
                 className="img-fluid mt-5 mb-5"
                 style={{ borderRadius: '8%', cursor: 'pointer' }}
-                alt=""
+                alt="Exterior painted home being renovated"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
                   duration: 1.5,
@@ -167,7 +171,9 @@ function Services() {
                 src={waterblastingImage}
                 className="img-fluid mt-5 mb-5 pt-3"
                 style={{ borderRadius: '8%' }}
-                alt=""
+                alt="Waterblasting deck"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 1.5,

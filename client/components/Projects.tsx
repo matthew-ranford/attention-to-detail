@@ -86,7 +86,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectOneImage}
                 className="img-fluid"
-                alt="first project"
+                alt="Exterior painted home and fence"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
@@ -133,7 +135,12 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project one image' + image.id}
+                              alt={
+                                'Exterior & Interior painting renovation' +
+                                image.id
+                              }
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
@@ -163,7 +170,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectTwoImage}
                 className="img-fluid"
-                alt=""
+                alt="Exterior painted new build"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
                   duration: 2,
@@ -208,7 +217,12 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project two image' + image.id}
+                              alt={
+                                'Exterior & Interior painted new build' +
+                                image.id
+                              }
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
@@ -238,7 +252,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectThreeImage}
                 className="img-fluid"
-                alt=""
+                alt="Interior painted new build"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
@@ -283,7 +299,12 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project three image' + image.id}
+                              alt={
+                                'Exterior & Interior painted new build' +
+                                image.id
+                              }
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
@@ -313,7 +334,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectFourImage}
                 className="img-fluid"
-                alt=""
+                alt="Exterior painted renovation"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
                   duration: 2,
@@ -358,7 +381,9 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project four image' + image.id}
+                              alt={'Exterior painted renovation' + image.id}
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
@@ -386,7 +411,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectFiveImage}
                 className="img-fluid"
-                alt=""
+                alt="Interior painted new build"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
@@ -431,7 +458,12 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project five image' + image.id}
+                              alt={
+                                'Exterior & Interior painted new build' +
+                                image.id
+                              }
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
@@ -459,7 +491,9 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectSixImage}
                 className="img-fluid"
-                alt=""
+                alt="Interior painted renovation"
+                loading="lazy"
+                decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
                   duration: 2,
@@ -504,7 +538,9 @@ function Projects() {
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Project six image' + image.id}
+                              alt={'Interior painted renovation' + image.id}
+                              loading="lazy"
+                              decoding="async"
                               style={{ borderRadius: '2%' }}
                             />
                           </Carousel.Item>
