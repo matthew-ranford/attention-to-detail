@@ -5,7 +5,60 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
+import emailjs from '@emailjs/browser'
+import { useState, ChangeEvent, FormEvent } from 'react'
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    number: '',
+    subject: '',
+    message: '',
+  })
+
+  const handleFormInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleEmailSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const { name, email, number, subject, message } = formData
+    if (!name || !email || !number || !subject || !message) {
+      console.log('Please fill in all fields')
+      return
+    }
+
+    const templateParams = {
+      name: name,
+      email: email,
+      number: number,
+      subject: subject,
+      message: message,
+    }
+
+    emailjs.init('3F64Uwf82y_srndD5')
+    emailjs
+      .send('service_atd', 'template_atd', templateParams)
+      .then((response) => {
+        console.log('Form submitted successfully:', response)
+        alert('Form submitted successfully')
+        setFormData({
+          name: '',
+          email: '',
+          number: '',
+          subject: '',
+          message: '',
+        })
+      })
+      .catch((error) => {
+        console.error('Error submitting form:', error)
+        alert('Failed to submit form, please try again later')
+      })
+  }
+
   return (
     <>
       <section id="contact" className="container mt-5">
@@ -21,51 +74,89 @@ function Contact() {
         <Container fluid="lg">
           <Row>
             <Col xs={12} md={6}>
-              <FloatingLabel
-                controlId="floatingName"
-                label="Name"
-                className="mb-3"
-              >
-                <Form.Control type="name" placeholder="Name" />
-              </FloatingLabel>
-              <FloatingLabel
-                controlId="floatingInput"
-                label="Email address"
-                className="mb-3"
-              >
-                <Form.Control type="email" placeholder="name@example.com" />
-              </FloatingLabel>
-              <FloatingLabel
-                controlId="floatingNumber"
-                label="Phone"
-                className="mb-3"
-              >
-                <Form.Control type="phone" placeholder="Number" />
-              </FloatingLabel>
-              <FloatingLabel
-                controlId="floatingSubjectMatter"
-                label="Subject"
-                className="mb-3"
-              >
-                <Form.Control type="subject" placeholder="Subject Matter" />
-              </FloatingLabel>
+              <Form onSubmit={handleEmailSubmit}>
+                <FloatingLabel
+                  controlId="floatingName"
+                  label="Name"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    name="name"
+                    type="name"
+                    placeholder="Name"
+                    required
+                    value={formData.name}
+                    onChange={handleFormInputChange}
+                  />
+                </FloatingLabel>
+                <FloatingLabel
+                  controlId="floatingInput"
+                  label="Email address"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    name="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    required
+                    value={formData.email}
+                    onChange={handleFormInputChange}
+                  />
+                </FloatingLabel>
+                <FloatingLabel
+                  controlId="floatingNumber"
+                  label="Phone"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    name="number"
+                    type="phone"
+                    placeholder="Number"
+                    required
+                    value={formData.number}
+                    onChange={handleFormInputChange}
+                  />
+                </FloatingLabel>
+                <FloatingLabel
+                  controlId="floatingSubjectMatter"
+                  label="Subject"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    name="subject"
+                    type="subject"
+                    placeholder="Subject Matter"
+                    required
+                    value={formData.subject}
+                    onChange={handleFormInputChange}
+                  />
+                </FloatingLabel>
 
-              <FloatingLabel
-                controlId="floatingTextarea"
-                label="Message"
-                className="mb-3"
-              >
-                <Form.Control
-                  as="textarea"
-                  placeholder="Leave a comment here"
-                  style={{ height: '10rem' }}
-                />
-              </FloatingLabel>
-              <div className="text-center">
-                <Button variant="primary" className="px-3 py-2 mb-3 mt-3">
-                  Submit
-                </Button>
-              </div>
+                <FloatingLabel
+                  controlId="floatingTextarea"
+                  label="Message"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    name="message"
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    required
+                    value={formData.message}
+                    onChange={handleFormInputChange}
+                    style={{ height: '10rem' }}
+                  />
+                </FloatingLabel>
+                <div className="text-center">
+                  <Button
+                    variant="primary"
+                    className="px-3 py-2 mb-3 mt-3"
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
+                </div>
+              </Form>
             </Col>
 
             <Col className="text-center pt-5">
