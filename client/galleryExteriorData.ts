@@ -8,6 +8,8 @@ import image6 from './images/atd-gallery-exterior/image-6.png'
 import image7 from './images/atd-gallery-exterior/image-7.png'
 import image8 from './images/atd-gallery-exterior/image-8.png'
 import image9 from './images/atd-gallery-exterior/image-9.png'
+import image10 from './images/atd-gallery-exterior/image-10.png'
+import image11 from './images/atd-gallery-exterior/image-11.png'
 
 const galleryExteriorImages = [
   {
@@ -49,6 +51,14 @@ const galleryExteriorImages = [
   {
     id: 10,
     image: image9,
+  },
+  {
+    id: 11,
+    image: image10,
+  },
+  {
+    id: 12,
+    image: image11,
   },
 ]
 
