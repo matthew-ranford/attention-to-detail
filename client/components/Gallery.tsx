@@ -43,8 +43,10 @@ function Gallery() {
                     <img
                       src={image.image}
                       className="d-block w-100"
-                      style={{ borderRadius: '8%' }}
-                      alt={'Slide image' + image.id}
+                      style={{ borderRadius: '5%' }}
+                      alt={'Exterior Painting Image' + image.id}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </Carousel.Item>
                 )
@@ -66,8 +68,10 @@ function Gallery() {
                     <img
                       src={image.image}
                       className="d-block w-100"
-                      style={{ borderRadius: '8%' }}
-                      alt={'Slide image' + image.id}
+                      style={{ borderRadius: '5%' }}
+                      alt={'Interior Painting & Decorating Image' + image.id}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </Carousel.Item>
                 )
