@@ -9,6 +9,11 @@ import emailjs from '@emailjs/browser'
 import { useState, ChangeEvent, FormEvent } from 'react'
 
 import { motion } from 'framer-motion'
+import {
+  UserIcon,
+  BookOpenIcon,
+  ChatBubbleBottomCenterTextIcon,
+} from '@heroicons/react/24/solid'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -93,10 +98,19 @@ function Contact() {
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1 }}
               >
-                <Form onSubmit={handleEmailSubmit}>
+                <Form
+                  onSubmit={handleEmailSubmit}
+                  data-bs-theme="dark"
+                  className="text-light"
+                >
                   <FloatingLabel
                     controlId="floatingName"
-                    label="Name"
+                    label={
+                      <span className="input-group">
+                        <UserIcon className="h-5 w-5 contact-icon" />
+                        <span className="px-2">Name</span>
+                      </span>
+                    }
                     className="mb-3"
                   >
                     <Form.Control
@@ -106,11 +120,20 @@ function Contact() {
                       required
                       value={formData.name}
                       onChange={handleFormInputChange}
+                      aria-describedby="nameHelp"
                     />
+                    <Form.Text id="nameHelp" className="px-2" muted>
+                      Enter first and/or last name
+                    </Form.Text>
                   </FloatingLabel>
                   <FloatingLabel
                     controlId="floatingInput"
-                    label="Email address"
+                    label={
+                      <span className="input-group">
+                        <i className="bi bi-envelope-at-fill h-6 w-6 px-1 contact-icon" />
+                        <span className="px-2">Email</span>
+                      </span>
+                    }
                     className="mb-3"
                   >
                     <Form.Control
@@ -120,11 +143,20 @@ function Contact() {
                       required
                       value={formData.email}
                       onChange={handleFormInputChange}
+                      aria-describedby="emailHelp"
                     />
+                    <Form.Text id="emailHelp" className="px-2" muted>
+                      Enter a valid email address, e.g: example@gmail.com
+                    </Form.Text>
                   </FloatingLabel>
                   <FloatingLabel
                     controlId="floatingNumber"
-                    label="Phone"
+                    label={
+                      <span className="input-group">
+                        <i className="bi bi-phone-fill h-6 w-6 px-1 contact-icon" />
+                        <span className="px-2">Phone</span>
+                      </span>
+                    }
                     className="mb-3"
                   >
                     <Form.Control
@@ -132,13 +164,23 @@ function Contact() {
                       type="phone"
                       placeholder="Number"
                       required
+                      pattern="(\+?\d+)"
                       value={formData.number}
                       onChange={handleFormInputChange}
+                      aria-describedby="numberHelp"
                     />
+                    <Form.Text id="numberHelp" className="px-2" muted>
+                      Enter a valid phone number (+ sign & numbers only)
+                    </Form.Text>
                   </FloatingLabel>
                   <FloatingLabel
                     controlId="floatingSubjectMatter"
-                    label="Subject"
+                    label={
+                      <span className="input-group">
+                        <BookOpenIcon className="h-5 w-5 contact-icon" />
+                        <span className="px-2">Subject</span>
+                      </span>
+                    }
                     className="mb-3"
                   >
                     <Form.Control
@@ -148,12 +190,21 @@ function Contact() {
                       required
                       value={formData.subject}
                       onChange={handleFormInputChange}
+                      aria-describedby="subjectHelp"
                     />
+                    <Form.Text id="subjectHelp" className="px-2" muted>
+                      Enter the subject matter this is regarding
+                    </Form.Text>
                   </FloatingLabel>
 
                   <FloatingLabel
                     controlId="floatingTextarea"
-                    label="Message"
+                    label={
+                      <span className="input-group">
+                        <ChatBubbleBottomCenterTextIcon className="h-5 w-5 contact-icon" />
+                        <span className="px-2">Message</span>
+                      </span>
+                    }
                     className="mb-3"
                   >
                     <Form.Control
@@ -163,8 +214,12 @@ function Contact() {
                       required
                       value={formData.message}
                       onChange={handleFormInputChange}
+                      aria-describedby="messageHelp"
                       style={{ height: '10rem' }}
                     />
+                    <Form.Text id="messageHelp" className="px-2" muted>
+                      Enter your message you have for me
+                    </Form.Text>
                   </FloatingLabel>
                   <motion.div
                     className="text-center"
@@ -188,7 +243,7 @@ function Contact() {
               <h1 className="text-light pb-3 pt-3">Links</h1>
               <Col xs={12} md={12} className="pb-3">
                 <a href="tel: 027 312 9323" aria-label="telephone number">
-                  <i className="bi bi-phone display-6">
+                  <i className="bi bi-phone display-6 contact-icon">
                     <button
                       className="text-light px-3 lead"
                       style={{
@@ -206,14 +261,14 @@ function Contact() {
               <Col xs={12} md={12} className="pb-3">
                 <a
                   href="mailto: atd.decorators@gmail.com"
-                  aria-label="link to instagram page"
+                  aria-label="link to email"
                   target="_blank"
                   rel="noreferrer"
                   className="lead"
                   style={{ textDecoration: 'none' }}
                 >
                   <i
-                    className="bi bi-envelope-at display-6"
+                    className="bi bi-envelope-at display-6 contact-icon"
                     style={{ marginRight: '0.3rem' }}
                   >
                     <button
@@ -236,7 +291,7 @@ function Contact() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i className="bi bi-facebook display-6">
+                  <i className="bi bi-facebook display-6 contact-icon">
                     <button
                       className="text-light px-3 lead"
                       style={{
@@ -261,7 +316,7 @@ function Contact() {
                   style={{ textDecoration: 'none' }}
                 >
                   <i
-                    className="bi bi-instagram display-6"
+                    className="bi bi-instagram display-6 contact-icon"
                     style={{ marginLeft: '0.5rem' }}
                   >
                     <button
