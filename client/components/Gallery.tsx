@@ -64,6 +64,7 @@ function Gallery() {
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
+            className="pt-5"
           >
             <h1 className="text-primary mt-5 pt-5 pb-5 text-center">
               Interior Painting & Decorating

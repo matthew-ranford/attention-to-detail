@@ -45,7 +45,7 @@ function Services() {
           </p>
         </div>
         <Container fluid="lg">
-          <Row className="justify-content-center align-items-center">
+          <Row className="justify-content-center align-items-center pb-3 mb-5">
             <Col xs={12} md={6}>
               <motion.img
                 src={newBuildImage}
@@ -93,7 +93,7 @@ function Services() {
               </motion.div>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center reverse-col pt-5">
+          <Row className="justify-content-center align-items-center reverse-col pt-5 mt-3 mb-5">
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -171,11 +171,11 @@ function Services() {
               </Modal>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center pt-5">
+          <Row className="justify-content-center align-items-center pt-5 mt-3">
             <Col xs={12} md={6}>
               <motion.img
                 src={waterblastingImage}
-                className="img-fluid mt-5 mb-5 pt-3"
+                className="img-fluid mt-5 mb-5"
                 style={{ borderRadius: '8%' }}
                 alt="Waterblasting deck"
                 loading="lazy"
