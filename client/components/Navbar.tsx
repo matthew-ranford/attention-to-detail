@@ -8,7 +8,7 @@ import logo from '../images/atd-logo.png'
 
 const listVariants = {
   hidden: {
-    y: -10,
+    y: -20,
     opacity: 0,
     scale: 0,
   },
@@ -41,7 +41,7 @@ function Navigation() {
                 src={logo}
                 alt="Attention To Detail Logo"
                 width={100}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               />
             </Navbar.Brand>
@@ -111,7 +111,7 @@ function Navigation() {
                       >
                         <motion.li
                           className="display-6"
-                          whileHover={{ color: 'rgb(0, 0, 0, 0.9)' }}
+                          whileHover={{ scale: 1.02, opacity: 0.5 }}
                         >
                           {link.text}
                         </motion.li>
