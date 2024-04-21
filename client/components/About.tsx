@@ -2,57 +2,85 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import { motion } from 'framer-motion'
+import { motion, animate, stagger, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 function About() {
+  const aboutText = useRef(null)
+  const aboutImage = useRef(null)
+
+  const textInView = useInView(aboutText)
+  const imageInView = useInView(aboutImage)
+
+  useEffect(() => {
+    if (textInView) {
+      animate(
+        '.animate-text',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-text', { opacity: 0, y: -20 }, { duration: 0 })
+    }
+  }, [textInView])
+
+  useEffect(() => {
+    if (imageInView) {
+      animate(
+        '.animate-image',
+        { opacity: 1, x: 0 },
+        {
+          duration: 1,
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate('.animate-image', { opacity: 0, x: 10 }, { duration: 0 })
+    }
+  }, [imageInView])
+
   return (
     <>
       <section id="about" className="container pt-5">
         <Container fluid="lg" className="pb-5">
           <Row className="justify-content-center align-items-center reverse-col">
-            <Col xs={12} md={6} className="lead text-light pt-5 mt-5">
-              <motion.div
-                initial={{ opacity: 0, x: -5 }}
-                transition={{ duration: 1 }}
-                whileInView={{ x: 0, opacity: 1 }}
-              >
-                <p>
+            <Col
+              xs={12}
+              md={6}
+              className="lead text-light pt-5 mt-5"
+              ref={aboutText}
+            >
+              <div>
+                <p className="animate-text">
                   Whether you need a fresh coat of paint to spruce up your
                   exisiting home or colour advice to shape your new one.
                   Attention to Detail Decorators are here for all of your
                   interior & exterior painting needs.
                 </p>
-                <p>
+                <p className="animate-text">
                   Our founder Corey Daken has been working in the industry for
                   over 10 years bringing a range of experience with him. His
                   work has involved collaboarting with architects, interior
                   designers, construction companies and home owners to meet the
                   results that his clients desire.
                 </p>
-                <p>The ATD team work all across the Wellington region.</p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                transition={{ duration: 1 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                className="pb-3"
-              >
+                <p className="animate-text">
+                  The ATD team work all across the Wellington region.
+                </p>
+              </div>
+              <div className="pb-3">
                 <Button
                   variant="primary"
-                  className="px-3 py-2 mt-3 mb-3"
+                  className="px-3 py-2 mt-3 mb-3 animate-text"
                   href="#contact"
                 >
                   Get a Quote
                 </Button>
-              </motion.div>
+              </div>
             </Col>
 
-            <Col xs={12} md={6} className="reverse-col">
-              <motion.div
-                initial={{ opacity: -10, x: 10 }}
-                transition={{ duration: 2 }}
-                whileInView={{ x: 0, opacity: 1 }}
-              >
+            <Col xs={12} md={6} className="reverse-col" ref={aboutImage}>
+              <motion.div className="animate-image">
                 <img
                   src="client/images/atd-logo.png"
                   className="img-fluid px-5"
