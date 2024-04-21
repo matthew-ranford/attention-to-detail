@@ -3,8 +3,8 @@ import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
+import { motion, animate, stagger, useInView } from 'framer-motion'
 
 import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.png'
 import projectOneImages from '../projectOneImageData'
@@ -45,47 +45,70 @@ function Projects() {
   const handleCloseProjectSix = () => setShowProjectSix(false)
   const handleShowProjectSix = () => setShowProjectSix(true)
 
+  const projectsText = useRef(null)
+  const textInView = useInView(projectsText)
+
+  const images = useRef(null)
+  const imagesInView = useInView(images)
+
+  useEffect(() => {
+    if (textInView) {
+      animate(
+        '.animate-projects-text',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-projects-text', { opacity: 0, y: -10 }, { duration: 0 })
+    }
+  }, [textInView])
+
+  useEffect(() => {
+    if (imagesInView) {
+      animate(
+        '.animate-project-images',
+        { opacity: 1, x: 0 },
+        {
+          duration: 0.5,
+          delay: stagger(0.35, { startDelay: 0.1 }),
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate(
+        '.animate-project-images',
+        { opacity: 0, x: -10 },
+        { duration: 0 }
+      )
+    }
+  }, [imagesInView])
+
   return (
     <>
       <section id="projects" className="container pb-5 mb-5">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.5 }}
-            whileInView={{ y: 0, opacity: 1 }}
-          >
-            <h1 className="text-primary mt-3 pt-5">Projects</h1>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.5 }}
-            whileInView={{ y: 0, opacity: 1 }}
-          >
-            <p className="lead text-light mb-4 pb-5 pt-4">
-              Some of our favourite projects we have completed!
-            </p>
-          </motion.div>
+        <div className="text-center" ref={projectsText}>
+          <h1 className="text-primary mt-3 pt-5 animate-projects-text">
+            Projects
+          </h1>
+
+          <p className="lead text-light mb-4 pb-5 pt-4 animate-projects-text">
+            Some of our favourite projects we have completed!
+          </p>
         </div>
         <Container fluid="lg" className="pt-3">
-          <Row className="justify-content-center align-items-center">
+          <Row
+            className="justify-content-center align-items-center"
+            ref={images}
+          >
             {/* ----------- FIRST PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">
-                  John Tocker
-                </h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectOne}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectOneImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted home and fence"
                 loading="lazy"
                 decoding="async"
@@ -155,21 +178,12 @@ function Projects() {
             {/* ----------- SECOND PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">
-                  Oriental Bay
-                </h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectTwo}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectTwoImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted new build"
                 loading="lazy"
                 decoding="async"
@@ -237,21 +251,12 @@ function Projects() {
             {/* ----------- THIRD PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">
-                  Waikanae Hills
-                </h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectThree}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectThreeImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
                 loading="lazy"
                 decoding="async"
@@ -319,21 +324,12 @@ function Projects() {
             {/* ----------- FOURTH PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">
-                  John Allen
-                </h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectFour}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectFourImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted renovation"
                 loading="lazy"
                 decoding="async"
@@ -398,19 +394,12 @@ function Projects() {
             {/* ----------- FIFTH PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">Deano</h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectFive}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectFiveImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
                 loading="lazy"
                 decoding="async"
@@ -478,19 +467,12 @@ function Projects() {
             {/* ----------- SIXTH PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                whileInView={{ opacity: 1 }}
-              >
-                <h2 className="text-primary text-center pt-5 pb-5">Raumati</h2>
-              </motion.div>
               <motion.img
                 onClick={handleShowProjectSix}
                 aria-hidden="true"
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectSixImage}
-                className="img-fluid"
+                className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted renovation"
                 loading="lazy"
                 decoding="async"
