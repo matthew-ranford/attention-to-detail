@@ -43,7 +43,7 @@ function Gallery() {
             <h1 className="text-primary pt-3 pb-5 text-center">
               Exterior Painting
             </h1>
-            <Carousel data-bs-theme="dark">
+            <Carousel data-bs-theme="dark" interval={null} fade={true}>
               {galleryExteriorImages.map((image) => {
                 return (
                   <Carousel.Item key={image.id}>
@@ -69,7 +69,7 @@ function Gallery() {
             <h1 className="text-primary mt-5 pt-5 pb-5 text-center">
               Interior Painting & Decorating
             </h1>
-            <Carousel data-bs-theme="dark">
+            <Carousel data-bs-theme="dark" interval={null} fade={true}>
               {galleryInteriorImages.map((image) => {
                 return (
                   <Carousel.Item key={image.id}>
