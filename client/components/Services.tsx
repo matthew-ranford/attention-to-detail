@@ -3,8 +3,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion, animate, stagger, useInView } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 
 import newBuildImage from '../images/atd-services/services-0.png'
 import renovationImage from '../images/atd-services/services-1.png'
@@ -17,26 +17,32 @@ function Services() {
   const handleCloseModal = () => setShowRenovationModal(false)
   const handleShowModal = () => setShowRenovationModal(true)
 
+  const servicesText = useRef(null)
+  const textInView = useInView(servicesText)
+
+  useEffect(() => {
+    if (textInView) {
+      animate(
+        '.animate-service-text',
+        { opacity: 1, y: 0 },
+        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+      )
+    } else {
+      animate('.animate-service-text', { opacity: 0, y: -10 }, { duration: 0 })
+    }
+  }, [textInView])
+
   return (
     <>
       <section id="services" className="container pb-5 mb-5">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.5 }}
-            whileInView={{ y: 0, opacity: 1 }}
-          >
-            <h1 className="text-primary mt-3 pt-5">Services</h1>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.5 }}
-            whileInView={{ y: 0, opacity: 1 }}
-          >
-            <p className="lead text-light mb-5 pb-5 pt-4">
-              Checkout the services we offer before reaching out for a quote!
-            </p>
-          </motion.div>
+        <div className="text-center" ref={servicesText}>
+          <h1 className="text-primary mt-3 pt-5 animate-service-text">
+            Services
+          </h1>
+
+          <p className="lead text-light mb-5 pb-5 pt-4 animate-service-text">
+            Checkout the services we offer before reaching out for a quote!
+          </p>
         </div>
         <Container fluid="lg">
           <Row className="justify-content-center align-items-center">
@@ -50,26 +56,26 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
               />
             </Col>
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
                 <h2 className="text-primary pt-3">New Builds</h2>
@@ -92,13 +98,13 @@ function Services() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
                 <h2 className="text-primary pt-3">Renovations</h2>
@@ -126,13 +132,13 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
               />
               <Modal
                 show={showRenovationModal}
@@ -176,26 +182,26 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
               />
             </Col>
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
-                  duration: 1.5,
+                  duration: 1.8,
                   type: 'spring',
-                  stiffness: 100,
+                  stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
                 <h2 className="text-primary pt-3">Waterblasting</h2>
