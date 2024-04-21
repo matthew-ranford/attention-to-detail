@@ -110,7 +110,7 @@ function Projects() {
                 src={mainProjectOneImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted home and fence"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
@@ -185,7 +185,7 @@ function Projects() {
                 src={mainProjectTwoImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted new build"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
@@ -258,7 +258,7 @@ function Projects() {
                 src={mainProjectThreeImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
@@ -331,7 +331,7 @@ function Projects() {
                 src={mainProjectFourImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted renovation"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
@@ -401,7 +401,7 @@ function Projects() {
                 src={mainProjectFiveImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
@@ -474,7 +474,7 @@ function Projects() {
                 src={mainProjectSixImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted renovation"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{

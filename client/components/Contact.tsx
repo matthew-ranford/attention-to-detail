@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 
 import emailjs from '@emailjs/browser'
 import { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'react'
@@ -262,13 +261,18 @@ function Contact() {
                   transition={{ duration: 0.5 }}
                   whileInView={{ y: 0, opacity: 1 }}
                 >
-                  <Button
-                    variant="primary"
-                    className="px-3 py-2 mb-3 mt-3"
+                  <motion.button
+                    className="btn btn-primary px-3 py-2 mb-3 mt-3"
                     type="submit"
+                    whileHover={{
+                      scale: 1.15,
+                      boxShadow: '0px 0px 7px rgb(255, 255, 255)',
+                      textShadow: '0px 0px 7px rgb(0, 0, 0)',
+                    }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
                   >
                     Submit
-                  </Button>
+                  </motion.button>
                 </motion.div>
               </Form>
             </Col>

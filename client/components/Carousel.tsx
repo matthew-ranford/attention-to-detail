@@ -10,7 +10,8 @@ function CarouselBackground() {
           fade={true}
           controls={false}
           indicators={false}
-          interval={3500}
+          interval={2500}
+          pause={false}
         >
           {carouselImages.map((image) => {
             return (

@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
@@ -69,13 +68,18 @@ function About() {
                 </p>
               </div>
               <div className="pb-3">
-                <Button
-                  variant="primary"
-                  className="px-3 py-2 mt-3 mb-3 animate-text"
+                <motion.a
+                  className="btn btn-primary px-3 py-2 mt-3 mb-3 animate-text"
                   href="#contact"
+                  whileHover={{
+                    scale: 1.15,
+                    boxShadow: '0px 0px 7px rgb(255, 255, 255)',
+                    textShadow: '0px 0px 7px rgb(0, 0, 0)',
+                  }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
                   Get a Quote
-                </Button>
+                </motion.a>
               </div>
             </Col>
 
