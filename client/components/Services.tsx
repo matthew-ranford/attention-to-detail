@@ -28,7 +28,7 @@ function Services() {
         { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
       )
     } else {
-      animate('.animate-service-text', { opacity: 0, y: -10 }, { duration: 0 })
+      animate('.animate-service-text', { opacity: 0, y: -20 }, { duration: 0 })
     }
   }, [textInView])
 
@@ -36,11 +36,11 @@ function Services() {
     <>
       <section id="services" className="container pb-5 mb-5">
         <div className="text-center" ref={servicesText}>
-          <h1 className="text-primary mt-3 pt-5 animate-service-text">
+          <h1 className="text-primary mt-5 pt-5 animate-service-text text-6xl">
             Services
           </h1>
 
-          <p className="lead text-light mb-5 pb-5 pt-4 animate-service-text">
+          <p className="text-3xl text-light mb-5 pb-5 pt-4 animate-service-text">
             Checkout the services we offer before reaching out for a quote!
           </p>
         </div>
@@ -78,8 +78,8 @@ function Services() {
                 viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
-                <h2 className="text-primary pt-3">New Builds</h2>
-                <p className="lead text-light pb-5">
+                <h2 className="text-primary pt-3 text-4xl">New Builds</h2>
+                <p className="text-xl leading-7 text-secondary font-medium pb-5">
                   Painting new build homes is like adding the final brushstroke
                   to a blank canvas, bringing architectural dreams to life. With
                   each stroke, I imbue fresh structures with personality and
@@ -107,8 +107,8 @@ function Services() {
                 viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
-                <h2 className="text-primary pt-3">Renovations</h2>
-                <p className="lead text-light pb-3">
+                <h2 className="text-primary pt-3 text-4xl">Renovations</h2>
+                <p className="text-xl leading-7 text-secondary font-medium pb-3">
                   Home renovations are my artistic playground, where walls
                   whisper tales of transformation. Armed with brushes and
                   palettes, I infuse each space with personality and vibrancy,
@@ -204,8 +204,8 @@ function Services() {
                 viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
-                <h2 className="text-primary pt-3">Waterblasting</h2>
-                <p className="lead text-light pb-3">
+                <h2 className="text-primary pt-3 text-4xl">Waterblasting</h2>
+                <p className="text-xl leading-7 text-secondary font-medium pb-3">
                   Waterblasting homes is like wielding natures power to unveil
                   their true essence. With high-pressure streams, I strip away
                   layers of grime and weathered memories, revealing pristine
