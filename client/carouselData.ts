@@ -20,7 +20,6 @@ const carouselImages = [
     id: 1,
     image: image13,
   },
-
   {
     id: 2,
     image: image1,

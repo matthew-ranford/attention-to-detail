@@ -50,20 +50,20 @@ function About() {
               ref={aboutText}
             >
               <div>
-                <p className="animate-text">
+                <p className="animate-text text-secondary leading-7 text-2xl font-medium">
                   Whether you need a fresh coat of paint to spruce up your
                   exisiting home or colour advice to shape your new one.
                   Attention to Detail Decorators are here for all of your
                   interior & exterior painting needs.
                 </p>
-                <p className="animate-text">
+                <p className="animate-text text-secondary leading-7 text-2xl pt-2 font-medium">
                   Our founder Corey Daken has been working in the industry for
                   over 10 years bringing a range of experience with him. His
                   work has involved collaboarting with architects, interior
                   designers, construction companies and home owners to meet the
                   results that his clients desire.
                 </p>
-                <p className="animate-text">
+                <p className="animate-text text-secondary leading-7 pt-2 text-2xl font-medium">
                   The ATD team work all across the Wellington region.
                 </p>
               </div>
@@ -78,7 +78,7 @@ function About() {
                   }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                  Get a Quote
+                  <span className="text-xl font-medium">Get a Quote</span>
                 </motion.a>
               </div>
             </Col>
