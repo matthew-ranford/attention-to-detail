@@ -87,11 +87,11 @@ function Projects() {
     <>
       <section id="projects" className="container pb-5 mb-5">
         <div className="text-center" ref={projectsText}>
-          <h1 className="text-primary mt-3 pt-5 animate-projects-text">
+          <h1 className="text-primary mt-3 pt-5 animate-projects-text text-6xl">
             Projects
           </h1>
 
-          <p className="lead text-light mb-4 pb-5 pt-4 animate-projects-text">
+          <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-projects-text font-medium">
             Some of our favourite projects we have completed!
           </p>
         </div>
@@ -142,11 +142,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">John Tocker</h2>
+                      <h2 className="px-2 text-4xl">John Tocker</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
@@ -215,11 +215,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">Oriental Bay</h2>
+                      <h2 className="px-2 text-4xl">Oriental Bay</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
@@ -288,11 +288,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2"> Waikanae Hills</h2>
+                      <h2 className="px-2 text-4xl"> Waikanae Hills</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
@@ -361,11 +361,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">John Allen</h2>
+                      <h2 className="px-2 text-4xl">John Allen</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
@@ -431,11 +431,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">Deano</h2>
+                      <h2 className="px-2 text-4xl">Deano</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
@@ -504,11 +504,11 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2">Raumati</h2>
+                      <h2 className="px-2 text-4xl">Raumati</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="lead text-light">
+                    <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.

@@ -40,7 +40,7 @@ function Services() {
             Services
           </h1>
 
-          <p className="text-3xl text-light mb-5 pb-5 pt-4 animate-service-text">
+          <p className="text-3xl text-light mb-5 pb-5 pt-4 animate-service-text font-medium">
             Checkout the services we offer before reaching out for a quote!
           </p>
         </div>
