@@ -19,7 +19,7 @@ function CarouselBackground() {
                 <img
                   src={image.image}
                   className="d-block w-100"
-                  alt={'Slide image' + image.id}
+                  alt={'Painting & decorating image' + image.id}
                   rel="preload"
                   loading="eager"
                 />
