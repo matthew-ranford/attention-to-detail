@@ -113,7 +113,7 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             className="animate-contact"
           >
-            <h1 className="text-primary mt-3 pt-5">Contact us!</h1>
+            <h1 className="text-primary mt-3 pt-5 text-6xl">Contact us!</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -121,10 +121,10 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             className="animate-contact"
           >
-            <p className="lead text-light pt-4">
+            <p className="text-3xl text-light pt-4 font-medium">
               Questions? Fill out the form to contact me directly!
             </p>
-            <p className="lead text-light mb-4 pb-5 pt-4">
+            <p className="text-3xl text-light mb-4 pb-5 pt-4 font-medium">
               Alternatively, message or call Corey at one of the links below!
             </p>
           </motion.div>
@@ -135,7 +135,7 @@ function Contact() {
               <Form
                 onSubmit={handleEmailSubmit}
                 data-bs-theme="dark"
-                className="text-light pt-3 animate-form-and-icons"
+                className="text-light text-lg pt-3 animate-form-and-icons"
               >
                 <FloatingLabel
                   controlId="floatingName"
@@ -180,7 +180,7 @@ function Contact() {
                     aria-describedby="emailHelp"
                   />
                   <Form.Text id="emailHelp" className="px-2" muted>
-                    Enter a valid email address, e.g: example@gmail.com
+                    Enter valid email address, e.g: example@gmail.com
                   </Form.Text>
                 </FloatingLabel>
                 <FloatingLabel
@@ -204,14 +204,14 @@ function Contact() {
                     aria-describedby="numberHelp"
                   />
                   <Form.Text id="numberHelp" className="px-2" muted>
-                    Enter a valid phone number (+ sign & numbers only)
+                    Enter valid phone number (+ sign optional & numbers)
                   </Form.Text>
                 </FloatingLabel>
                 <FloatingLabel
                   controlId="floatingSubjectMatter"
                   label={
                     <span className="input-group">
-                      <BookOpenIcon className="h-5 w-5 contact-icon" />
+                      <BookOpenIcon className="h-5 w-5 contact-icon mt-1" />
                       <span className="px-2">Subject</span>
                     </span>
                   }
@@ -235,7 +235,7 @@ function Contact() {
                   controlId="floatingTextarea"
                   label={
                     <span className="input-group">
-                      <ChatBubbleBottomCenterTextIcon className="h-5 w-5 contact-icon" />
+                      <ChatBubbleBottomCenterTextIcon className="h-5 w-5 contact-icon mt-1" />
                       <span className="px-2">Message</span>
                     </span>
                   }
@@ -271,32 +271,36 @@ function Contact() {
                     }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                   >
-                    Submit
+                    <span className="text-xl font-medium">Submit</span>
                   </motion.button>
                 </motion.div>
               </Form>
             </Col>
 
             <Col className="text-center pt-5">
-              <h1 className="text-light pb-3 pt-3 animate-form-and-icons">
+              <h1 className="text-primary text-4xl pb-3 pt-5 animate-form-and-icons">
                 Links
               </h1>
               <Col xs={12} md={12} className="pb-3 animate-form-and-icons">
                 <motion.div whileHover={{ scale: 1.1, opacity: 0.5 }}>
                   <a href="tel: 027 312 9323" aria-label="telephone number">
-                    <i className="bi bi-phone display-6 contact-icon">
-                      <button
-                        className="text-light px-3 lead"
-                        style={{
-                          textDecoration: 'none',
-                          border: 'none',
-                          background: 'none',
-                          marginRight: '0.2rem',
-                        }}
-                      >
-                        +64 27-312-9323
-                      </button>
-                    </i>
+                    <button
+                      className="text-secondary px-3 lead"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        marginRight: '0.3rem',
+                      }}
+                    >
+                      <img
+                        src="client/images/phone-icon.png"
+                        alt="Mobile logo"
+                      />
+                      <span className="px-2">+64 27-312-9323</span>
+                    </button>
                   </a>
                 </motion.div>
               </Col>
@@ -308,23 +312,25 @@ function Contact() {
                     target="_blank"
                     rel="noreferrer"
                     className="lead"
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'none', display: 'inline-flex' }}
                   >
-                    <i
-                      className="bi bi-envelope-at display-6 contact-icon"
-                      style={{ marginRight: '0.3rem' }}
+                    <button
+                      className="text-secondary"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        marginRight: '0.4rem',
+                      }}
                     >
-                      <button
-                        className="text-light px-3 lead"
-                        style={{
-                          textDecoration: 'none',
-                          border: 'none',
-                          background: 'none',
-                        }}
-                      >
-                        Email me directly
-                      </button>
-                    </i>
+                      <img
+                        src="client/images/gmail-icon.png"
+                        alt="Gmail logo"
+                      />
+                      <span className="px-2">Email me directly</span>
+                    </button>
                   </a>
                 </motion.div>
               </Col>
@@ -335,20 +341,28 @@ function Contact() {
                     aria-label="link to facebook page"
                     target="_blank"
                     rel="noreferrer"
+                    className="lead"
+                    style={{
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                    }}
                   >
-                    <i className="bi bi-facebook display-6 contact-icon">
-                      <button
-                        className="text-light px-3 lead"
-                        style={{
-                          textDecoration: 'none',
-                          border: 'none',
-                          background: 'none',
-                          marginLeft: '0.1rem',
-                        }}
-                      >
-                        Facebook Message
-                      </button>
-                    </i>
+                    <button
+                      className="text-secondary"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <img
+                        src="client/images/facebook-icon.png"
+                        alt="Facebook logo"
+                      />
+                      <span className="px-2">Facebook Message</span>
+                    </button>
                   </a>
                 </motion.div>
               </Col>
@@ -365,23 +379,28 @@ function Contact() {
                     target="_blank"
                     rel="noreferrer"
                     className="lead"
-                    style={{ textDecoration: 'none' }}
+                    style={{
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                    }}
                   >
-                    <i
-                      className="bi bi-instagram display-6 contact-icon"
-                      style={{ marginLeft: '0.5rem' }}
+                    <button
+                      className="text-secondary"
+                      style={{
+                        textDecoration: 'none',
+                        border: 'none',
+                        background: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                      }}
                     >
-                      <button
-                        className="text-light px-3 lead"
-                        style={{
-                          textDecoration: 'none',
-                          border: 'none',
-                          background: 'none',
-                        }}
-                      >
-                        Instagram Message
-                      </button>
-                    </i>
+                      <img
+                        src="client/images/instagram-icon.png"
+                        alt="Instagram logo"
+                        style={{ marginRight: '8px' }}
+                      />
+                      <span>Instagram Message</span>
+                    </button>
                   </a>
                 </motion.div>
               </Col>
