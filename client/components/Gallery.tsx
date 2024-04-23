@@ -26,11 +26,11 @@ function Gallery() {
     <>
       <section id="gallery" className="container pb-5 mb-5">
         <div className="text-center" ref={galleryText}>
-          <h1 className="text-primary mt-3 pt-5 animate-gallery-text">
+          <h1 className="text-primary mt-3 pt-5 animate-gallery-text text-6xl">
             Gallery
           </h1>
 
-          <p className="lead text-light mb-4 pb-5 pt-4 animate-gallery-text">
+          <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-gallery-text font-medium">
             Some more photos of work we have been proud to complete!
           </p>
         </div>
@@ -40,7 +40,7 @@ function Gallery() {
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
           >
-            <h1 className="text-primary pt-3 pb-5 text-center">
+            <h1 className="text-primary pt-3 pb-5 text-center text-4xl">
               Exterior Painting
             </h1>
             <Carousel data-bs-theme="dark" interval={null} fade={true}>
@@ -66,7 +66,7 @@ function Gallery() {
             whileInView={{ opacity: 1 }}
             className="pt-5"
           >
-            <h1 className="text-primary mt-5 pt-5 pb-5 text-center">
+            <h1 className="text-primary mt-5 pt-5 pb-5 text-center text-4xl">
               Interior Painting & Decorating
             </h1>
             <Carousel data-bs-theme="dark" interval={null} fade={true}>
