@@ -8,7 +8,7 @@ import { motion, animate, stagger, useInView } from 'framer-motion'
 
 import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.jpg'
 import projectOneImages from '../projectOneImageData'
-import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.png'
+import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.jpg'
 import projectTwoImages from '../projectTwoImageData'
 import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.png'
 import projectThreeImages from '../projectThreeImageData'
@@ -185,7 +185,7 @@ function Projects() {
                 src={mainProjectTwoImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted new build"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
