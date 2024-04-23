@@ -10,7 +10,7 @@ import mainProjectOneImage from '../images/atd-projects-project-one/main-image-p
 import projectOneImages from '../projectOneImageData'
 import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.jpg'
 import projectTwoImages from '../projectTwoImageData'
-import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.png'
+import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.jpg'
 import projectThreeImages from '../projectThreeImageData'
 import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.png'
 import projectFourImages from '../projectFourImageData'
@@ -258,7 +258,7 @@ function Projects() {
                 src={mainProjectThreeImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
