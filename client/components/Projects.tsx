@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import { useState, useEffect, useRef } from 'react'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 
-import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.png'
+import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.jpg'
 import projectOneImages from '../projectOneImageData'
 import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.png'
 import projectTwoImages from '../projectTwoImageData'
@@ -110,7 +110,7 @@ function Projects() {
                 src={mainProjectOneImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted home and fence"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
