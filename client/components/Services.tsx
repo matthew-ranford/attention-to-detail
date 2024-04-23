@@ -1,22 +1,15 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Modal from 'react-bootstrap/Modal'
 
 import { motion, animate, stagger, useInView } from 'framer-motion'
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
-import newBuildImage from '../images/atd-services/services-0.png'
-import renovationImage from '../images/atd-services/services-1.png'
-import waterblastingImage from '../images/atd-services/services-2.png'
-import renovationVideo from '../images/atd-services/spray-video.mp4'
+import newBuildImage from '../images/atd-services/services-0.jpg'
+import renovationImage from '../images/atd-services/services-1.jpg'
+import waterblastingImage from '../images/atd-services/services-2.jpg'
 
 function Services() {
-  const [showRenovationModal, setShowRenovationModal] = useState(false)
-
-  const handleCloseModal = () => setShowRenovationModal(false)
-  const handleShowModal = () => setShowRenovationModal(true)
-
   const servicesText = useRef(null)
   const textInView = useInView(servicesText)
 
@@ -122,11 +115,10 @@ function Services() {
             </Col>
             <Col xs={12} md={6}>
               <motion.img
-                onClick={handleShowModal}
                 aria-hidden="true"
                 src={renovationImage}
                 className="img-fluid mt-5 mb-5"
-                style={{ borderRadius: '8%', cursor: 'pointer' }}
+                style={{ borderRadius: '8%' }}
                 alt="Exterior painted home being renovated"
                 loading="lazy"
                 decoding="async"
@@ -140,35 +132,6 @@ function Services() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.7 }}
               />
-              <Modal
-                show={showRenovationModal}
-                onHide={handleCloseModal}
-                animation={true}
-                centered={true}
-                style={{
-                  backgroundColor: 'rgb(37, 37, 37, 0.95)',
-                }}
-                data-bs-theme="dark"
-                size="lg"
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 1.5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2">Spray unit in action</h2>
-                    </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body className="background">
-                    <video controls autoPlay style={{ borderRadius: '5%' }}>
-                      <track kind="captions" label="Spray Video" />
-                      <source src={renovationVideo} type="video/mp4" />
-                    </video>
-                  </Modal.Body>
-                </motion.div>
-              </Modal>
             </Col>
           </Row>
           <Row className="justify-content-center align-items-center pt-5 mt-3">
