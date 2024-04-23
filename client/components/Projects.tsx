@@ -12,9 +12,9 @@ import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-p
 import projectTwoImages from '../projectTwoImageData'
 import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.jpg'
 import projectThreeImages from '../projectThreeImageData'
-import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.png'
+import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.jpg'
 import projectFourImages from '../projectFourImageData'
-import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.png'
+import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.jpg'
 import projectFiveImages from '../projectFiveImageData'
 import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.png'
 import projectSixImages from '../projectSixImageData'
@@ -331,7 +331,7 @@ function Projects() {
                 src={mainProjectFourImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted renovation"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
@@ -401,7 +401,7 @@ function Projects() {
                 src={mainProjectFiveImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
                 transition={{
