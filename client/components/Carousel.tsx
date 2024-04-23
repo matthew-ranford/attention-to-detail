@@ -20,8 +20,6 @@ function CarouselBackground() {
                   src={image.image}
                   className="d-block w-100"
                   alt={'Painting & decorating image' + image.id}
-                  rel="preload"
-                  loading="eager"
                 />
               </Carousel.Item>
             )
