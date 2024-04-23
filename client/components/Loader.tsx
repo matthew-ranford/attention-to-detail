@@ -17,14 +17,14 @@ function Loader() {
       })
         .from(['#title-logo'], {
           opacity: 0,
-          scale: 3,
+          scale: 2.5,
         })
         .to(['#title-logo'], {
           opacity: 0,
           scale: 1,
           x: '-=250',
-          delay: 0.5,
-          duration: 0.25,
+          delay: 0.7,
+          duration: 0.5,
         })
         .to('#intro-slider', { xPercent: '-100', duration: 0.15 })
         .from('#main-layout', {
@@ -40,7 +40,7 @@ function Loader() {
       <div className="relative" ref={comp}>
         <div
           id="intro-slider"
-          className="h-screen p-10 absolute z-10 w-full flex flex-col place-items-center gap-15 tracking-tight pt-5"
+          className="h-svh p-10 absolute z-10 w-full flex flex-col place-items-center pt-5"
           style={{ background: '#2b2b2b' }}
         >
           <img

@@ -57,6 +57,13 @@ button.btn-close {
   z-index: 2;
 }
 
+/* CAROUSEL IMAGE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .img-responsive {
+    height: auto;
+  }
+}
+
 /* SERVICES SECTION */
 @media (max-width: 768px) {
   /* SERVICES SECTION - IMAGES */
