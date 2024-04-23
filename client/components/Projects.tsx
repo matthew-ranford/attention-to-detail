@@ -16,7 +16,7 @@ import mainProjectFourImage from '../images/atd-projects-project-four/main-image
 import projectFourImages from '../projectFourImageData'
 import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.jpg'
 import projectFiveImages from '../projectFiveImageData'
-import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.png'
+import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.jpg'
 import projectSixImages from '../projectSixImageData'
 
 function Projects() {
@@ -474,7 +474,7 @@ function Projects() {
                 src={mainProjectSixImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted renovation"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}
                 transition={{
