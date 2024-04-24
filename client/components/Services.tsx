@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react'
 import newBuildImage from '../images/atd-services/services-0.jpg'
 import renovationImage from '../images/atd-services/services-1.jpg'
 import waterblastingImage from '../images/atd-services/services-2.jpg'
+import roofPaintingImage from '../images/atd-services/services-3.jpg'
 
 function Services() {
   const servicesText = useRef(null)
@@ -137,7 +138,7 @@ function Services() {
           <Row className="justify-content-center align-items-center pt-5 mt-3">
             <Col xs={12} md={6}>
               <motion.img
-                src={waterblastingImage}
+                src={roofPaintingImage}
                 className="img-fluid mt-5 mb-5"
                 style={{ borderRadius: '8%' }}
                 alt="Waterblasting deck"
@@ -167,6 +168,35 @@ function Services() {
                 viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
+                <h2 className="text-primary pt-3 text-4xl">Roof Painting</h2>
+                <p className="text-xl leading-7 text-secondary font-medium pb-3">
+                  Roof painting is like giving a crown to a home, protecting it
+                  from the elements while enhancing its curb appeal. With
+                  specialized coatings and meticulous application, I shield
+                  roofs from weathering and UV damage, extending their lifespan
+                  and preserving their integrity. Beyond functionality, I bring
+                  aesthetic charm to every peak and slope, transforming dull
+                  rooftops into focal points of architectural beauty. Its not
+                  just about painting; its about safeguarding and elevating the
+                  very essence of a home.
+                </p>
+              </motion.div>
+            </Col>
+          </Row>
+          <Row className="justify-content-center align-items-center reverse-col pt-5 mt-3 mb-5">
+            <Col xs={12} md={6}>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                transition={{
+                  duration: 1.8,
+                  type: 'spring',
+                  stiffness: 50,
+                  damping: 8,
+                }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+                className="center-text"
+              >
                 <h2 className="text-primary pt-3 text-4xl">Waterblasting</h2>
                 <p className="text-xl leading-7 text-secondary font-medium pb-3">
                   Waterblasting homes is like wielding natures power to unveil
@@ -179,6 +209,26 @@ function Services() {
                   canvas ready for new stories to unfold.
                 </p>
               </motion.div>
+            </Col>
+            <Col xs={12} md={6}>
+              <motion.img
+                aria-hidden="true"
+                src={waterblastingImage}
+                className="img-fluid mt-5 mb-5"
+                style={{ borderRadius: '8%' }}
+                alt="Exterior painted home being renovated"
+                loading="lazy"
+                decoding="async"
+                initial={{ opacity: 0, x: 20 }}
+                transition={{
+                  duration: 1.8,
+                  type: 'spring',
+                  stiffness: 50,
+                  damping: 8,
+                }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.7 }}
+              />
             </Col>
           </Row>
         </Container>
