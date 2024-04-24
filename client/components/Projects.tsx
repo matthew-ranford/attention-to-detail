@@ -92,7 +92,8 @@ function Projects() {
           </h1>
 
           <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-projects-text font-medium">
-            Some of our favourite projects we have completed!
+            Some of our favourite Renovation and New Build projects we have
+            completed!
           </p>
         </div>
         <Container fluid="lg" className="pt-3">
