@@ -29,7 +29,6 @@ function Gallery() {
           <h1 className="text-primary mt-3 pt-5 animate-gallery-text text-6xl">
             Gallery
           </h1>
-
           <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-gallery-text font-medium">
             Some more photos of work we have been proud to complete!
           </p>
