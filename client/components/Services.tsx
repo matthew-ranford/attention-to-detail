@@ -34,7 +34,7 @@ function Services() {
             Services
           </h1>
 
-          <p className="text-3xl text-light mb-5 pb-5 pt-4 animate-service-text font-medium">
+          <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-service-text font-medium">
             Checkout the services we offer before reaching out for a quote!
           </p>
         </div>
@@ -141,7 +141,7 @@ function Services() {
                 src={roofPaintingImage}
                 className="img-fluid mt-5 mb-5"
                 style={{ borderRadius: '8%' }}
-                alt="Waterblasting deck"
+                alt="Newly painted roof"
                 loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
@@ -216,7 +216,7 @@ function Services() {
                 src={waterblastingImage}
                 className="img-fluid mt-5 mb-5"
                 style={{ borderRadius: '8%' }}
-                alt="Exterior painted home being renovated"
+                alt="Waterblasting deck"
                 loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: 20 }}

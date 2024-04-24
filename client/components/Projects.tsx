@@ -400,7 +400,7 @@ function Projects() {
                 style={{ cursor: 'pointer', borderRadius: '8%' }}
                 src={mainProjectFiveImage}
                 className="img-fluid mb-5 animate-project-images"
-                alt="Interior painted new build"
+                alt="Exterior & Interior painted new build"
                 loading="lazy"
                 decoding="async"
                 initial={{ opacity: 0, x: -50 }}
