@@ -47,7 +47,7 @@ function Navigation() {
             </Navbar.Brand>
             <motion.div>
               <Navbar.Toggle
-                aria-controls="responsive-navbar-nav"
+                aria-controls={`offcanvasNavbar-expand-${expand}`}
                 aria-label="navar toggle button"
                 className="px-4"
               >
@@ -66,7 +66,7 @@ function Navigation() {
               style={{ width: '100%' }}
             >
               <Navbar.Toggle
-                aria-controls="responsive-navbar-nav"
+                aria-controls={`offcanvasNavbar-expand-${expand}`}
                 aria-label="navar toggle button"
                 style={{ backgroundColor: '#2b2b2b' }}
               >
