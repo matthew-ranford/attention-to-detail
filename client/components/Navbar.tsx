@@ -1,7 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import Offcanvas from 'react-bootstrap/Offcanvas'
+import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 
 import logo from '../images/atd-logo.png'

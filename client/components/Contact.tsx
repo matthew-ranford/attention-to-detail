@@ -1,13 +1,8 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
-import Form from 'react-bootstrap/Form'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col, FloatingLabel, Form } from 'react-bootstrap'
+import { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'react'
+import { motion, animate, stagger, useInView } from 'framer-motion'
 
 import emailjs from '@emailjs/browser'
-import { useState, useEffect, useRef, ChangeEvent, FormEvent } from 'react'
-
-import { motion, animate, stagger, useInView } from 'framer-motion'
 import {
   UserIcon,
   BookOpenIcon,

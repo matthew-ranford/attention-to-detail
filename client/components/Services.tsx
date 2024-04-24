@@ -1,7 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
+import { Container, Row, Col } from 'react-bootstrap'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
@@ -33,7 +30,6 @@ function Services() {
           <h1 className="text-primary mt-5 pt-5 animate-service-text text-6xl">
             Services
           </h1>
-
           <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-service-text font-medium">
             Checkout the services we offer before reaching out for a quote!
           </p>

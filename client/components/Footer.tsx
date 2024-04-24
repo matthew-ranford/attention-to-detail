@@ -1,6 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 
 import logo from '../images/atd-logo.png'

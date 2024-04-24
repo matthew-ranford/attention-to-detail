@@ -1,5 +1,4 @@
-import Container from 'react-bootstrap/Container'
-import Carousel from 'react-bootstrap/Carousel'
+import { Container, Carousel } from 'react-bootstrap'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 

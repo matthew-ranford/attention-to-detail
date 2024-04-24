@@ -1,8 +1,4 @@
-import Modal from 'react-bootstrap/Modal'
-import Carousel from 'react-bootstrap/Carousel'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Modal, Carousel, Container, Row, Col } from 'react-bootstrap'
 import { useState, useEffect, useRef } from 'react'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 
@@ -90,7 +86,6 @@ function Projects() {
           <h1 className="text-primary mt-3 pt-5 animate-projects-text text-6xl">
             Projects
           </h1>
-
           <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-projects-text font-medium">
             Some of our favourite Renovation and New Build projects we have
             completed!
