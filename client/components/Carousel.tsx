@@ -18,7 +18,7 @@ function CarouselBackground() {
               <Carousel.Item key={image.id}>
                 <img
                   src={image.image}
-                  className="d-block w-100 h-svh img-responsive"
+                  className="d-block w-100"
                   alt={'Painting & decorating image' + image.id}
                 />
               </Carousel.Item>
