@@ -57,7 +57,6 @@ function Navigation() {
             </motion.div>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
               restoreFocus={false}
               style={{ width: '100%' }}
