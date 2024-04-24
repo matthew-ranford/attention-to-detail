@@ -8,10 +8,10 @@
 ## New Technologies I'm Trialing:
 - GSAP
 - Tailwind
+- EmailJS
 
 ## Other Technologies Being Used:
 - React Bootstrap
-- EmailJS
 - Sass
 - Framer-Motion
 - Canva
