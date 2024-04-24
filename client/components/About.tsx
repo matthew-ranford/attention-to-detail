@@ -4,6 +4,8 @@ import Col from 'react-bootstrap/Col'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
+import logo from '../images/atd-logo.png'
+
 function About() {
   const aboutText = useRef(null)
   const aboutImage = useRef(null)
@@ -86,7 +88,7 @@ function About() {
             <Col xs={12} md={6} className="reverse-col" ref={aboutImage}>
               <motion.div className="animate-image">
                 <img
-                  src="client/images/atd-logo.png"
+                  src={logo}
                   className="img-fluid px-5"
                   alt="Company logo"
                   loading="lazy"

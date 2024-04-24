@@ -4,6 +4,8 @@ import Navigation from './Navbar'
 import CarouselBackground from './Carousel'
 import DelayedRender from './DelayedRender'
 
+import logo from '../images/atd-logo.png'
+
 function Loader() {
   const comp = useRef(null)
 
@@ -45,7 +47,7 @@ function Loader() {
         >
           <img
             id="title-logo"
-            src="client/images/atd-logo.png"
+            src={logo}
             className="img-fluid pt-5"
             alt="Company logo"
             loading="eager"

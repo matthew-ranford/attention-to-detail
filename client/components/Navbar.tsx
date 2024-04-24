@@ -48,6 +48,7 @@ function Navigation() {
             <motion.div>
               <Navbar.Toggle
                 aria-controls="responsive-navbar-nav"
+                aria-label="navar toggle button"
                 className="px-4"
               >
                 <motion.i
@@ -66,6 +67,7 @@ function Navigation() {
             >
               <Navbar.Toggle
                 aria-controls="responsive-navbar-nav"
+                aria-label="navar toggle button"
                 style={{ backgroundColor: '#2b2b2b' }}
               >
                 <Navbar.Brand>

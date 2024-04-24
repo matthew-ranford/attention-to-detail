@@ -14,6 +14,11 @@ import {
   ChatBubbleBottomCenterTextIcon,
 } from '@heroicons/react/24/solid'
 
+import phoneIcon from '../images/phone-icon.png'
+import emailIcon from '../images/gmail-icon.png'
+import facebookIcon from '../images/facebook-icon.png'
+import instagramIcon from '../images/instagram-icon.png'
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -295,10 +300,7 @@ function Contact() {
                         marginRight: '0.3rem',
                       }}
                     >
-                      <img
-                        src="client/images/phone-icon.png"
-                        alt="Mobile logo"
-                      />
+                      <img src={phoneIcon} alt="Mobile logo" />
                       <span className="px-2">+64 27-312-9323</span>
                     </button>
                   </a>
@@ -325,10 +327,7 @@ function Contact() {
                         marginRight: '0.4rem',
                       }}
                     >
-                      <img
-                        src="client/images/gmail-icon.png"
-                        alt="Gmail logo"
-                      />
+                      <img src={emailIcon} alt="Gmail logo" />
                       <span className="px-2">Email me directly</span>
                     </button>
                   </a>
@@ -357,10 +356,7 @@ function Contact() {
                         alignItems: 'center',
                       }}
                     >
-                      <img
-                        src="client/images/facebook-icon.png"
-                        alt="Facebook logo"
-                      />
+                      <img src={facebookIcon} alt="Facebook logo" />
                       <span className="px-2">Facebook Message</span>
                     </button>
                   </a>
@@ -395,7 +391,7 @@ function Contact() {
                       }}
                     >
                       <img
-                        src="client/images/instagram-icon.png"
+                        src={instagramIcon}
                         alt="Instagram logo"
                         style={{ marginRight: '8px' }}
                       />
