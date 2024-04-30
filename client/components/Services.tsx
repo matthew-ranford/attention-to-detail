@@ -70,15 +70,10 @@ function Services() {
               >
                 <h2 className="text-primary pt-3 text-4xl">New Builds</h2>
                 <p className="text-xl leading-7 text-secondary font-medium pb-5">
-                  Painting new build homes is like adding the final brushstroke
-                  to a blank canvas, bringing architectural dreams to life. With
-                  each stroke, I imbue fresh structures with personality and
-                  warmth, transforming bare walls into welcoming spaces. From
-                  choosing the perfect palette to executing flawless finishes, I
-                  ensure every corner reflects the vision and aspirations of its
-                  future inhabitants. It is not just about painting walls; it is
-                  about crafting havens where memories are born and cherished
-                  for years to come.
+                  Whether you need a fresh coat of paint to spruce up your
+                  exisiting home or colour advice to shape your new one.
+                  Attention to Detail Decorators are here for all of your
+                  interior & exterior painting needs.
                 </p>
               </motion.div>
             </Col>
@@ -99,14 +94,9 @@ function Services() {
               >
                 <h2 className="text-primary pt-3 text-4xl">Renovations</h2>
                 <p className="text-xl leading-7 text-secondary font-medium pb-3">
-                  Home renovations are my artistic playground, where walls
-                  whisper tales of transformation. Armed with brushes and
-                  palettes, I infuse each space with personality and vibrancy,
-                  turning mundane rooms into captivating canvases. From soothing
-                  neutrals to bold bursts of color, I wield my craft to evoke
-                  emotions and elevate atmospheres. With meticulous precision
-                  and boundless creativity, I bring dreams to life, one stroke
-                  at a time.
+                  Whether renovating an existing space or adding square meters
+                  to your home, Attention to Detail is here for all your
+                  interior and exterior painting needs.
                 </p>
               </motion.div>
             </Col>
@@ -166,15 +156,12 @@ function Services() {
               >
                 <h2 className="text-primary pt-3 text-4xl">Roof Painting</h2>
                 <p className="text-xl leading-7 text-secondary font-medium pb-3">
-                  Roof painting is like giving a crown to a home, protecting it
-                  from the elements while enhancing its curb appeal. With
-                  specialized coatings and meticulous application, I shield
-                  roofs from weathering and UV damage, extending their lifespan
-                  and preserving their integrity. Beyond functionality, I bring
-                  aesthetic charm to every peak and slope, transforming dull
-                  rooftops into focal points of architectural beauty. Its not
-                  just about painting; its about safeguarding and elevating the
-                  very essence of a home.
+                  Transform your home&apos;s exterior with our professional roof
+                  painting services. Say goodbye to dull weathered roofs and
+                  hello to vibrant long-lasting colours. Whether you&apos;re
+                  looking to refresh the look of your home, increase its value
+                  before selling, or have it protected from the elements, roof
+                  painting services are the perfect solution.
                 </p>
               </motion.div>
             </Col>
@@ -195,14 +182,11 @@ function Services() {
               >
                 <h2 className="text-primary pt-3 text-4xl">Waterblasting</h2>
                 <p className="text-xl leading-7 text-secondary font-medium pb-3">
-                  Waterblasting homes is like wielding natures power to unveil
-                  their true essence. With high-pressure streams, I strip away
-                  layers of grime and weathered memories, revealing pristine
-                  surfaces beneath. It is not just about cleanliness, but
-                  restoring dignity to each facade, breathing new vitality into
-                  tired exteriors. With precision and care, I harness the force
-                  of water to rejuvenate homes, leaving behind a refreshed
-                  canvas ready for new stories to unfold.
+                  Revitalize your surfaces with our water blasting services, and
+                  say farewell to grime, mold, and slippery surfaces, whether
+                  it&apos;s your driveway, patio, deck, or exterior of your
+                  home, our water blasting services will have it looking brand
+                  new.
                 </p>
               </motion.div>
             </Col>
