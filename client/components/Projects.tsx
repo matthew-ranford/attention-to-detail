@@ -138,15 +138,17 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">John Tocker</h2>
+                      <h2 className="px-2 text-4xl">
+                        Rangihiroa Street, Waikanae
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectOneImages.map((image) => {
@@ -211,15 +213,17 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Oriental Bay</h2>
+                      <h2 className="px-2 text-4xl">
+                        Oriental Bay, Wellington
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectTwoImages.map((image) => {
@@ -284,15 +288,15 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl"> Waikanae Hills</h2>
+                      <h2 className="px-2 text-4xl">Huia Street, Waikanae</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectThreeImages.map((image) => {
@@ -357,15 +361,15 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">John Allen</h2>
+                      <h2 className="px-2 text-4xl">Kohekohe Road, Waikanae</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectFourImages.map((image) => {
@@ -427,15 +431,15 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Deano</h2>
+                      <h2 className="px-2 text-4xl">Huia Street, Waikanae</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectFiveImages.map((image) => {
@@ -500,15 +504,15 @@ function Projects() {
                 >
                   <Modal.Header closeButton>
                     <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Raumati</h2>
+                      <h2 className="px-2 text-4xl">The Crescent, Raumati</h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
-                    <p className="text-xl leading-7 text-secondary font-medium">
+                    {/* <p className="text-xl leading-7 text-secondary font-medium">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
-                    </p>
+                    </p> */}
 
                     <Carousel fade={true}>
                       {projectSixImages.map((image) => {
