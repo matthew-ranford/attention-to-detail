@@ -4,7 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/attention-to-detail',
+  base: '/',
   build: {
     outDir: 'build',
     emptyOutDir: true,
