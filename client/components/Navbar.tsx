@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { motion } from 'framer-motion'
 
-import logo from '../images/atd-logo.png'
+import logo from '../images/ATD-logo.png'
 
 const listVariants = {
   hidden: {
@@ -37,7 +37,7 @@ function Navigation() {
               <img
                 src={logo}
                 alt="Attention To Detail Logo"
-                width={100}
+                width={250}
                 loading="eager"
                 decoding="async"
               />
