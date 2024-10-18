@@ -25,21 +25,21 @@ function Services() {
 
   return (
     <>
-      <section id="services" className="container pb-5 mb-5">
+      <section id="services" className="container pt-3">
         <div className="text-center" ref={servicesText}>
-          <h1 className="text-primary mt-5 pt-5 animate-service-text text-6xl">
+          <h1 className="text-primary pt-5 animate-service-text text-6xl">
             Services
           </h1>
-          <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-service-text font-medium">
+          <p className="text-2xl text-light mb-4 pb-5 pt-4 animate-service-text font-medium">
             Checkout the services we offer before reaching out for a quote!
           </p>
         </div>
         <Container fluid="lg">
-          <Row className="justify-content-center align-items-center pb-3 mb-5">
+          <Row className="justify-content-center align-items-center">
             <Col xs={12} md={6}>
               <motion.img
                 src={newBuildImage}
-                className="img-fluid mb-5"
+                className="img-fluid"
                 style={{ borderRadius: '8%' }}
                 alt="Exterior painted new build home"
                 loading="lazy"
@@ -68,8 +68,8 @@ function Services() {
                 viewport={{ once: true, amount: 0.7 }}
                 className="center-text"
               >
-                <h2 className="text-primary pt-3 text-4xl">New Builds</h2>
-                <p className="text-xl leading-7 text-secondary font-medium pb-5">
+                <h2 className="text-primary pt-5 text-4xl">New Builds</h2>
+                <p className="text-xl leading-7 text-secondary font-medium pb-5 pt-2">
                   Whether you need a fresh coat of paint to spruce up your
                   exisiting home or colour advice to shape your new one.
                   Attention to Detail Decorators are here for all of your
@@ -78,7 +78,7 @@ function Services() {
               </motion.div>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center reverse-col pt-5 mt-3 mb-5">
+          <Row className="justify-content-center align-items-center reverse-col pt-3">
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -93,7 +93,7 @@ function Services() {
                 className="center-text"
               >
                 <h2 className="text-primary pt-3 text-4xl">Renovations</h2>
-                <p className="text-xl leading-7 text-secondary font-medium pb-3">
+                <p className="text-xl leading-7 text-secondary font-medium pb-5 pt-2">
                   Whether renovating an existing space or adding square meters
                   to your home, Attention to Detail is here for all your
                   interior and exterior painting needs.
@@ -121,7 +121,7 @@ function Services() {
               />
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center pt-5 mt-3">
+          <Row className="justify-content-center align-items-center">
             <Col xs={12} md={6}>
               <motion.img
                 src={roofPaintingImage}
@@ -155,7 +155,7 @@ function Services() {
                 className="center-text"
               >
                 <h2 className="text-primary pt-3 text-4xl">Roof Painting</h2>
-                <p className="text-xl leading-7 text-secondary font-medium pb-3">
+                <p className="text-xl leading-7 text-secondary font-medium pb-3 pt-2">
                   Transform your home&apos;s exterior with our professional roof
                   painting services. Say goodbye to dull weathered roofs and
                   hello to vibrant long-lasting colours. Whether you&apos;re
@@ -166,7 +166,7 @@ function Services() {
               </motion.div>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center reverse-col pt-5 mt-3 mb-5">
+          <Row className="justify-content-center align-items-center reverse-col">
             <Col xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -181,7 +181,7 @@ function Services() {
                 className="center-text"
               >
                 <h2 className="text-primary pt-3 text-4xl">Waterblasting</h2>
-                <p className="text-xl leading-7 text-secondary font-medium pb-3">
+                <p className="text-xl leading-7 text-secondary font-medium pb-5 pt-2">
                   Revitalize your surfaces with our water blasting services, and
                   say farewell to grime, mold, and slippery surfaces, whether
                   it&apos;s your driveway, patio, deck, or exterior of your

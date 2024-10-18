@@ -105,7 +105,7 @@ function Contact() {
 
   return (
     <>
-      <section id="contact" className="container mt-5">
+      <section id="contact" className="container">
         <div className="text-center" ref={contact}>
           <motion.div
             initial={{ opacity: 0, y: -8 }}
@@ -113,7 +113,7 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             className="animate-contact"
           >
-            <h1 className="text-primary mt-3 pt-5 text-6xl">Contact us!</h1>
+            <h1 className="text-primary text-6xl mt-5">Contact us!</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -121,10 +121,10 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             className="animate-contact"
           >
-            <p className="text-3xl text-light pt-4 font-medium">
+            <p className="text-2xl text-light pt-4 font-medium">
               Questions? Fill out the form to contact me directly!
             </p>
-            <p className="text-3xl text-light mb-4 pb-5 pt-4 font-medium">
+            <p className="text-2xl text-light mb-2 pb-2 pt-2 font-medium">
               Alternatively, message or call Corey at one of the links below!
             </p>
           </motion.div>

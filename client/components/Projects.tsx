@@ -81,12 +81,12 @@ function Projects() {
 
   return (
     <>
-      <section id="projects" className="container pb-5 mb-5">
+      <section id="projects" className="container">
         <div className="text-center" ref={projectsText}>
-          <h1 className="text-primary mt-3 pt-5 animate-projects-text text-6xl">
+          <h1 className="text-primary animate-projects-text text-6xl">
             Projects
           </h1>
-          <p className="text-3xl text-light mb-4 pb-5 pt-4 animate-projects-text font-medium">
+          <p className="text-2xl text-light mb-2 pb-2 pt-4 animate-projects-text font-medium">
             Some of our favourite Renovation and New Build projects we have
             completed!
           </p>
