@@ -25,7 +25,7 @@ function Services() {
 
   return (
     <>
-      <section id="services" className="container pt-3">
+      <section id="services" className="container">
         <div className="text-center" ref={servicesText}>
           <h1 className="text-primary pt-5 animate-service-text text-6xl">
             Services

@@ -4,7 +4,7 @@ import Navigation from './Navbar'
 import CarouselBackground from './Carousel'
 import DelayedRender from './DelayedRender'
 
-import logo from '../images/atd-logo.png'
+import logo from '../images/ATD-logo.png'
 
 function Loader() {
   const comp = useRef(null)
@@ -43,7 +43,7 @@ function Loader() {
         <div
           id="intro-slider"
           className="h-svh p-10 absolute z-10 w-full flex flex-col place-items-center pt-5"
-          style={{ background: '#2b2b2b' }}
+          style={{ background: '#202020' }}
         >
           <img
             id="title-logo"
@@ -52,8 +52,8 @@ function Loader() {
             alt="Company logo"
             loading="eager"
             rel="preload"
-            height={400}
-            width={400}
+            height={600}
+            width={600}
           />
         </div>
         <DelayedRender delay={115}>

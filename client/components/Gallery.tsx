@@ -23,7 +23,7 @@ function Gallery() {
 
   return (
     <>
-      <section id="gallery" className="container">
+      <section id="gallery" className="container pt-3 pb-3">
         <div className="text-center" ref={galleryText}>
           <h1 className="text-primary animate-gallery-text text-6xl">
             Gallery

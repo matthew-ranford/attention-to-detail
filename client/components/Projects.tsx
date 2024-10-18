@@ -81,7 +81,7 @@ function Projects() {
 
   return (
     <>
-      <section id="projects" className="container">
+      <section id="projects" className="container pt-3 pb-2">
         <div className="text-center" ref={projectsText}>
           <h1 className="text-primary animate-projects-text text-6xl">
             Projects

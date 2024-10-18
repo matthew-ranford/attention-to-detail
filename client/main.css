@@ -18,7 +18,10 @@
 
 /* MAIN BACKGROUND COLOUR */
 .background {
-  background-color: #2b2b2b;
+  background-color: #202020;
+}
+.background-change {
+  background-color: #202022;
 }
 
 /* NAVBAR SECTION */

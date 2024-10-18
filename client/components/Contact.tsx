@@ -113,7 +113,7 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             className="animate-contact"
           >
-            <h1 className="text-primary text-6xl mt-5">Contact us!</h1>
+            <h1 className="text-primary text-6xl mt-4">Contact us!</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 8 }}

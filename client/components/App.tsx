@@ -14,9 +14,13 @@ function App() {
       <DelayedRender delay={115}>
         <div className="background">
           <About />
-          <Services />
+          <div className="background-change">
+            <Services />
+          </div>
           <Projects />
-          <Gallery />
+          <div className="background-change">
+            <Gallery />
+          </div>
           <Contact />
           <Footer />
         </div>
