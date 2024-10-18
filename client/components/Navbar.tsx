@@ -40,6 +40,7 @@ function Navigation() {
                 width={250}
                 loading="eager"
                 decoding="async"
+                className="hidden sm:block"
               />
             </Navbar.Brand>
             <motion.div>
