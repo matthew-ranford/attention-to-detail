@@ -1,22 +1,26 @@
-import { Container, Row, Col } from 'react-bootstrap'
-import { motion, animate, stagger, useInView } from 'framer-motion'
+import { Container } from 'react-bootstrap'
+import { animate, stagger, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import logo from '../images/ATD-logo.png'
+import aboutImageMain from '../images/about-image.png'
+
+import divider from '../images/line-divider.png'
 
 function About() {
   const aboutText = useRef(null)
+  const dividerImage = useRef(null)
   const aboutImage = useRef(null)
 
-  const textInView = useInView(aboutText)
-  const imageInView = useInView(aboutImage)
+  const textInView = useInView(aboutText, { once: true })
+  const dividerInView = useInView(aboutImage, { once: true })
+  const aboutImageInView = useInView(aboutImage, { once: true })
 
   useEffect(() => {
     if (textInView) {
       animate(
         '.animate-text',
         { opacity: 1, y: 0 },
-        { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
+        { duration: 1, delay: stagger(0.2), ease: 'circOut' }
       )
     } else {
       animate('.animate-text', { opacity: 0, y: -20 }, { duration: 0 })
@@ -24,77 +28,90 @@ function About() {
   }, [textInView])
 
   useEffect(() => {
-    if (imageInView) {
+    if (dividerInView) {
+      animate(
+        '.animate-divider',
+        { opacity: 1, x: 0 },
+        {
+          duration: 1.2,
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate('.animate-divider', { opacity: 0, x: 1000 }, { duration: 0 })
+    }
+  }, [dividerInView])
+
+  useEffect(() => {
+    if (aboutImageInView) {
       animate(
         '.animate-image',
-        { opacity: 1, x: 0 },
+        { opacity: 1, y: 0 },
         {
           duration: 1,
           ease: 'circOut',
         }
       )
     } else {
-      animate('.animate-image', { opacity: 0, x: 10 }, { duration: 0 })
+      animate('.animate-image', { opacity: 0, y: -20 }, { duration: 0 })
     }
-  }, [imageInView])
+  }, [aboutImageInView])
 
   return (
     <>
-      <section id="about" className="container pt-3 pb-5">
+      <section
+        id="about"
+        className="container relative mb-96 pt-10 md:pt-24 pb-5"
+      >
         <Container fluid="lg">
-          <Row className="justify-content-center align-items-center reverse-col">
-            <Col
-              xs={12}
-              md={6}
-              className="lead text-light pt-5"
+          <div
+            className="absolute left-0 lg:left-[34%] overflow-hidden"
+            ref={dividerImage}
+          >
+            {' '}
+            <img
+              src={divider}
+              alt="Attention To Detail Logo"
+              width="100%"
+              loading="eager"
+              decoding="async"
+              className="hidden md:block animate-divider"
+            />
+          </div>
+          <div className="md:pt-10">
+            <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center">
+              Who We Are
+            </h1>{' '}
+            <div
+              className="z-50 absolute w-[230px] sm:w-[350px] lg:w-[500px] 2xl:w-[650px] left-[35%] md:left-[50%] top-[76%] md:top-[92%] lg:top-[105%] 2xl:top-[110%] roboto-paragraph text-lg md:text-xl 2xl:text-2xl"
               ref={aboutText}
             >
-              <div>
-                <p className="animate-text text-secondary leading-7 text-xl font-medium">
-                  Whether you need a fresh coat of paint to spruce up your
-                  exisiting home or colour advice to shape your new one.
-                  Attention to Detail Decorators are here for all of your
-                  interior & exterior painting needs.
-                </p>
-                <p className="animate-text text-secondary leading-7 text-xl pt-2 font-medium">
-                  Our founder Corey Daken has been working in the industry for
-                  over 10 years bringing a range of experience with him. His
-                  work has involved collaboarting with architects, interior
-                  designers, construction companies and home owners to meet the
-                  results that his clients desire.
-                </p>
-                <p className="animate-text text-secondary leading-7 pt-2 text-xl font-medium">
-                  The ATD team work all across the Wellington region.
-                </p>
-              </div>
-              <div className="pb-3">
-                <motion.a
-                  className="btn btn-primary px-3 py-2 mt-3 mb-3 animate-text"
-                  href="#contact"
-                  whileHover={{
-                    scale: 1.15,
-                    boxShadow: '0px 0px 7px rgb(255, 255, 255)',
-                    textShadow: '0px 0px 7px rgb(0, 0, 0)',
-                  }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                >
-                  <span className="text-xl font-medium">Get a Quote</span>
-                </motion.a>
-              </div>
-            </Col>
-
-            <Col xs={12} md={6} className="reverse-col" ref={aboutImage}>
-              <motion.div className="animate-image">
-                <img
-                  src={logo}
-                  className="img-fluid"
-                  alt="Company logo"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </motion.div>
-            </Col>
-          </Row>
+              <p className="animate-text">
+                Our founder Corey Daken has been working in the industry for
+                over 10 years bringing a range of experience with him. His work
+                has involved collaborating with architects, interior designers,
+                construction companies and home owners to meet the results that
+                his clients desire.
+              </p>
+              <p className="animate-text">
+                {' '}
+                Whether you need a fresh coat of paint to spruce up your
+                existing home or colour advice to shape your new one. Attention
+                to Detail Decorators are here for all of your interior &
+                exterior painting needs.
+              </p>
+            </div>
+          </div>
+          <div ref={aboutImage}>
+            <img
+              src={aboutImageMain}
+              alt="Attention To Detail Logo"
+              width=""
+              loading="eager"
+              decoding="async"
+              className="absolute -left-[15%] md:left-0 animate-image"
+            />
+          </div>
         </Container>
       </section>
     </>

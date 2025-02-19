@@ -24,7 +24,7 @@ function CarouselBackground() {
             width="100%"
             loading="eager"
             decoding="async"
-            className="h-[800px] md:h-[750px] 2xl:h-[1500px] object-cover"
+            className="h-[800px] md:h-[750px] 2xl:h-[1300px] object-cover"
           />
           <div className="absolute inset-0 bg-[#006cc1] bg-opacity-10 sm:hidden"></div>
         </div>
