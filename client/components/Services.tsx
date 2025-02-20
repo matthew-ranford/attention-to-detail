@@ -31,7 +31,7 @@ function Services() {
   useEffect(() => {
     if (dividerInView) {
       animate(
-        '.animate-divider',
+        '.animate-divider-1',
         { opacity: 1, x: 0 },
         {
           duration: 1.2,
@@ -39,7 +39,7 @@ function Services() {
         }
       )
     } else {
-      animate('.animate-divider', { opacity: 0, x: 1000 }, { duration: 0 })
+      animate('.animate-divider-1', { opacity: 0, x: 1000 }, { duration: 0 })
     }
   }, [dividerInView])
 
@@ -61,12 +61,12 @@ function Services() {
               width="100%"
               loading="eager"
               decoding="async"
-              className="hidden md:block animate-divider"
+              className="hidden md:block animate-divider-1"
             />
           </div>
 
           <div className="md:pt-20" ref={servicesText}>
-            <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-service-text">
+            <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-service-text">
               Our Services
             </h1>
             <div className="roboto-paragraph max-w-[560px] text-lg md:text-xl 2xl:text-2xl animate-service-text mx-auto pb-10">
@@ -114,7 +114,7 @@ function Services() {
                 viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
-                <h2 className="header text-[#883E1B] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+                <h2 className="secondary-header text-[#883E1B] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
                   New Builds
                 </h2>
                 <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
@@ -140,7 +140,7 @@ function Services() {
                 viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
-                <h2 className="header text-[#1281DD] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+                <h2 className="secondary-header text-[#1281DD] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
                   Renovations
                 </h2>
                 <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
@@ -204,7 +204,7 @@ function Services() {
                 viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
-                <h2 className="header text-[#273859] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+                <h2 className="secondary-header text-[#273859] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
                   Roof Painting
                 </h2>
                 <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
@@ -232,7 +232,7 @@ function Services() {
                 viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
-                <h2 className="header text-[#A75239] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+                <h2 className="secondary-header text-[#A75239] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
                   Waterblasting
                 </h2>
                 <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">

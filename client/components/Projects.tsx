@@ -87,7 +87,7 @@ function Projects() {
   useEffect(() => {
     if (dividerInView) {
       animate(
-        '.animate-divider',
+        '.animate-divider-2',
         { opacity: 1, x: 0 },
         {
           duration: 1.2,
@@ -95,7 +95,7 @@ function Projects() {
         }
       )
     } else {
-      animate('.animate-divider', { opacity: 0, x: 1000 }, { duration: 0 })
+      animate('.animate-divider-2', { opacity: 0, x: 1000 }, { duration: 0 })
     }
   }, [dividerInView])
 
@@ -114,15 +114,15 @@ function Projects() {
               width="100%"
               loading="eager"
               decoding="async"
-              className="hidden md:block animate-divider"
+              className="hidden md:block animate-divider-2"
             />
           </div>
         </Container>
         <div className="md:pt-20" ref={projectsText}>
-          <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-projects-text">
+          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-projects-text">
             Our Projects
           </h1>
-          <p className="roboto-paragraph max-w-[700px] text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10">
+          <p className="roboto-paragraph text-center text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10">
             Some of our favourite renovation and new build projects we have
             completed!
           </p>

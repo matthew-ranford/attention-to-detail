@@ -76,7 +76,7 @@ function About() {
             />
           </div>
           <div className="md:pt-20">
-            <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center">
+            <h1 className="secondary-header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center">
               Who We Are
             </h1>{' '}
             <div
