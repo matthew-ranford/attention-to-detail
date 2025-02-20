@@ -9,7 +9,7 @@ import divider from '../images/line-divider.png'
 
 function Gallery() {
   const galleryText = useRef(null)
-  const textInView = useInView(galleryText)
+  const textInView = useInView(galleryText, { once: true })
 
   const dividerImage = useRef(null)
   const dividerInView = useInView(dividerImage, { once: true })
@@ -22,7 +22,7 @@ function Gallery() {
         { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
       )
     } else {
-      animate('.animate-gallery-text', { opacity: 0, y: -10 }, { duration: 0 })
+      animate('.animate-gallery-text', { opacity: 0, y: -20 }, { duration: 0 })
     }
   }, [textInView])
 
@@ -37,16 +37,19 @@ function Gallery() {
         }
       )
     } else {
-      animate('.animate-divider-3', { opacity: 0, x: 1000 }, { duration: 0 })
+      animate('.animate-divider-3', { opacity: 0, x: -1000 }, { duration: 0 })
     }
   }, [dividerInView])
 
   return (
     <>
-      <section id="gallery" className="container relative pt-10 md:pt-20 pb-5">
+      <section
+        id="gallery"
+        className="container relative pt-10 md:pt-20 pb-5 mb-32"
+      >
         <Container fluid="lg">
           <div
-            className="absolute left-0 lg:left-[34%] overflow-hidden"
+            className="absolute left-0 lg:right-[34%] overflow-hidden"
             ref={dividerImage}
           >
             {' '}
@@ -60,11 +63,11 @@ function Gallery() {
             />
           </div>
         </Container>
-        <div className="md:pt-20" ref={galleryText}>
-          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-gallery-text">
+        <div className="md:pt-20 px-3" ref={galleryText}>
+          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left animate-gallery-text">
             Our Gallery
           </h1>
-          <p className="roboto-paragraph text-center text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10 animate-gallery-text">
+          <p className="roboto-paragraph text-left text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10 animate-gallery-text">
             Some more photos of work we have been proud to complete!
           </p>
         </div>

@@ -39,7 +39,7 @@ function Services() {
         }
       )
     } else {
-      animate('.animate-divider-1', { opacity: 0, x: 1000 }, { duration: 0 })
+      animate('.animate-divider-1', { opacity: 0, x: -1000 }, { duration: 0 })
     }
   }, [dividerInView])
 
@@ -51,7 +51,7 @@ function Services() {
       >
         <Container fluid="lg">
           <div
-            className="absolute left-0 lg:left-[34%] overflow-hidden"
+            className="absolute left-0 lg:right-[34%] overflow-hidden"
             ref={dividerImage}
           >
             {' '}
@@ -65,11 +65,11 @@ function Services() {
             />
           </div>
 
-          <div className="md:pt-20" ref={servicesText}>
-            <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-service-text">
+          <div className="md:pt-20 px-4" ref={servicesText}>
+            <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left animate-service-text">
               Our Services
             </h1>
-            <div className="roboto-paragraph max-w-[560px] text-lg md:text-xl 2xl:text-2xl animate-service-text mx-auto pb-10">
+            <div className="roboto-paragraph max-w-[500px] text-left text-lg md:text-xl 2xl:text-2xl animate-service-text pb-10">
               <p className="animate-service-text">
                 Attention to Detail Painting & Decorating services is located in
                 the Hutt Valley region, and works all over the Greater

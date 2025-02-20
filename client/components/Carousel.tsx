@@ -41,7 +41,7 @@ function CarouselBackground() {
             width="100%"
             loading="eager"
             decoding="async"
-            className="h-[800px] md:h-[750px] 2xl:h-[1300px] object-cover rounded-2xl shadow-2xl"
+            className="h-[800px] md:h-[680px] 2xl:h-[1300px] object-cover rounded-2xl shadow-2xl"
           />
           <div className="absolute inset-0 bg-[#006cc1] bg-opacity-10 sm:hidden"></div>
         </div>
@@ -63,12 +63,12 @@ function CarouselBackground() {
               ideas to life. Let us help you create a space you’ll love.
             </p>
             <div className="block sm:inline-block pt-4 animate-hero-text">
-              <button className="text-white w-[330px] sm:w-[200px] rounded bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] sm:mt-7 px-5 py-3 ">
+              <button className="text-white w-[330px] sm:w-[200px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] sm:mt-7 px-5 py-3">
                 Get a quote
               </button>
             </div>
             <div className="block sm:inline-block mt-2 animate-hero-text">
-              <button className="w-[330px] sm:w-[200px] border rounded bg-[#C1C7C7] border-black transition-all duration-1000 hover:bg-[#a4a8a8] sm:mt-7 sm:ml-5 px-5 py-3">
+              <button className="w-[330px] sm:w-[200px] border rounded shadow-2xl bg-[#C1C7C7] border-black transition-all duration-1000 hover:bg-[#a4a8a8] sm:mt-7 sm:ml-5 px-5 py-3">
                 Our services
               </button>
             </div>

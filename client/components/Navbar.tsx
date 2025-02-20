@@ -3,21 +3,21 @@ import { motion } from 'framer-motion'
 
 import logo from '../images/logo.png'
 
-const listVariants = {
-  hidden: {
-    y: -20,
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.9,
-    },
-  },
-}
+// const listVariants = {
+//   hidden: {
+//     y: -20,
+//     opacity: 0,
+//     scale: 0,
+//   },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//     scale: 1,
+//     transition: {
+//       duration: 0.9,
+//     },
+//   },
+// }
 
 const navLinks = [
   { href: '#about', text: 'About' },
@@ -103,9 +103,9 @@ function Navigation() {
                   {navLinks.map((link, index) => (
                     <Nav.Link key={index} href={link.href} className="nav-link">
                       <motion.div
-                        variants={listVariants}
-                        initial="hidden"
-                        animate="visible"
+                        // variants={listVariants}
+                        // initial="hidden"
+                        // animate="visible"
                         className="text-dark"
                       >
                         {link.text === 'Contact' ? (

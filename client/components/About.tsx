@@ -59,8 +59,8 @@ function About() {
 
   return (
     <>
-      <section id="about" className="container relative pt-10 md:pt-44 pb-5">
-        <Container fluid="lg">
+      <section className="container relative pt-10 md:pt-44 pb-5">
+        <Container fluid="lg" id="about">
           <div
             className="absolute left-0 lg:left-[34%] overflow-hidden"
             ref={dividerImage}
@@ -76,7 +76,7 @@ function About() {
             />
           </div>
           <div className="md:pt-20">
-            <h1 className="secondary-header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center">
+            <h1 className="secondary-header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-right mx-32">
               Who We Are
             </h1>{' '}
             <div

@@ -26,10 +26,10 @@ function App() {
           {/* <div className="background-change"> */}
           <Gallery />
           {/* </div> */}
-          <div className="background-change">
-            <Contact />
-            <Footer />
-          </div>
+          {/* <div className="background-change"> */}
+          <Contact />
+          <Footer />
+          {/* </div> */}
         </div>
       </div>
       {/* </DelayedRender> */}

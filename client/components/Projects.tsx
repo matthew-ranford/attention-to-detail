@@ -118,11 +118,11 @@ function Projects() {
             />
           </div>
         </Container>
-        <div className="md:pt-20" ref={projectsText}>
-          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-projects-text">
+        <div className="md:pt-20 mx-10" ref={projectsText}>
+          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left max-w-[480px] ml-auto animate-projects-text">
             Our Projects
           </h1>
-          <p className="roboto-paragraph text-center text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10">
+          <p className="roboto-paragraph text-left text-lg md:text-xl 2xl:text-2xl animate-projects-text pb-10 max-w-[470px] ml-auto">
             Some of our favourite renovation and new build projects we have
             completed!
           </p>
