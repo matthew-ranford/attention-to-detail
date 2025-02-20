@@ -6,25 +6,33 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Loader from './Loader'
 import DelayedRender from './DelayedRender'
+import CarouselBackground from './Carousel'
+import Navigation from './Navbar'
 
 function App() {
   return (
     <>
-      <Loader />
-      <DelayedRender delay={115}>
+      {/* <Loader /> */}
+      <div className="body">
+        <div className="navbar-container">
+          <Navigation />
+        </div>
+        <CarouselBackground />
+        {/* <DelayedRender delay={0}> */}
         <div className="background">
           <About />
-          <div className="background-change">
-            <Services />
-          </div>
+          <Services />
           <Projects />
+          {/* <div className="background-change"> */}
+          <Gallery />
+          {/* </div> */}
           <div className="background-change">
-            <Gallery />
+            <Contact />
+            <Footer />
           </div>
-          <Contact />
-          <Footer />
         </div>
-      </DelayedRender>
+      </div>
+      {/* </DelayedRender> */}
     </>
   )
 }

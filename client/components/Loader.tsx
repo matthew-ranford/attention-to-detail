@@ -43,7 +43,7 @@ function Loader() {
         <div
           id="intro-slider"
           className="h-svh p-10 absolute z-10 w-full flex flex-col place-items-center pt-5"
-          style={{ background: '#202020' }}
+          style={{ background: '#dfd4ce' }}
         >
           <img
             id="title-logo"
@@ -56,12 +56,12 @@ function Loader() {
             width={600}
           />
         </div>
-        <DelayedRender delay={115}>
-          <div className="navbar-container">
-            <Navigation />
-          </div>
-          <CarouselBackground />
-        </DelayedRender>
+        {/* <DelayedRender delay={115}> */}
+        <div className="navbar-container">
+          <Navigation />
+        </div>
+        <CarouselBackground />
+        {/* </DelayedRender> */}
       </div>
     </>
   )

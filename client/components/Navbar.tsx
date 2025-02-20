@@ -38,7 +38,7 @@ function Navigation() {
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
                 aria-label="navbar toggle button"
-                className="px-4"
+                className="px-4 mx-4"
               >
                 <motion.i
                   className="bi bi-justify display-6"
@@ -99,7 +99,7 @@ function Navigation() {
                 </Navbar.Brand>
               </Navbar.Toggle>
               <Offcanvas.Body className="text-center px-2">
-                <Nav className="w-100 justify-content-end align-items-center gap-3">
+                <Nav className="w-100 justify-content-end align-items-center gap-4">
                   {navLinks.map((link, index) => (
                     <Nav.Link key={index} href={link.href} className="nav-link">
                       <motion.div

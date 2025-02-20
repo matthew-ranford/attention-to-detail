@@ -12,7 +12,7 @@ function About() {
   const aboutImage = useRef(null)
 
   const textInView = useInView(aboutText, { once: true })
-  const dividerInView = useInView(aboutImage, { once: true })
+  const dividerInView = useInView(dividerImage, { once: true })
   const aboutImageInView = useInView(aboutImage, { once: true })
 
   useEffect(() => {
@@ -59,10 +59,7 @@ function About() {
 
   return (
     <>
-      <section
-        id="about"
-        className="container relative mb-96 pt-10 md:pt-24 pb-5"
-      >
+      <section id="about" className="container relative pt-10 md:pt-44 pb-5">
         <Container fluid="lg">
           <div
             className="absolute left-0 lg:left-[34%] overflow-hidden"
@@ -78,7 +75,7 @@ function About() {
               className="hidden md:block animate-divider"
             />
           </div>
-          <div className="md:pt-10">
+          <div className="md:pt-20">
             <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center">
               Who We Are
             </h1>{' '}

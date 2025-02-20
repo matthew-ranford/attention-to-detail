@@ -2,18 +2,20 @@ import { Modal, Carousel, Container, Row, Col } from 'react-bootstrap'
 import { useState, useEffect, useRef } from 'react'
 import { motion, animate, stagger, useInView } from 'framer-motion'
 
-import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.jpg'
+import mainProjectOneImage from '../images/atd-projects-project-one/main-image-project-one.png'
 import projectOneImages from '../projectOneImageData'
-import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.jpg'
+import mainProjectTwoImage from '../images/atd-projects-project-two/main-image-project-two.png'
 import projectTwoImages from '../projectTwoImageData'
-import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.jpg'
+import mainProjectThreeImage from '../images/atd-projects-project-three/main-image-project-three.png'
 import projectThreeImages from '../projectThreeImageData'
-import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.jpg'
+import mainProjectFourImage from '../images/atd-projects-project-four/main-image-project-four.png'
 import projectFourImages from '../projectFourImageData'
-import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.jpg'
+import mainProjectFiveImage from '../images/atd-projects-project-five/main-image-project-five.png'
 import projectFiveImages from '../projectFiveImageData'
-import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.jpg'
+import mainProjectSixImage from '../images/atd-projects-project-six/main-image-project-six.png'
 import projectSixImages from '../projectSixImageData'
+
+import divider from '../images/line-divider.png'
 
 function Projects() {
   const [showProjectOne, setShowProjectOne] = useState(false)
@@ -42,10 +44,13 @@ function Projects() {
   const handleShowProjectSix = () => setShowProjectSix(true)
 
   const projectsText = useRef(null)
-  const textInView = useInView(projectsText)
+  const textInView = useInView(projectsText, { once: true })
 
   const images = useRef(null)
-  const imagesInView = useInView(images)
+  const imagesInView = useInView(images, { once: true })
+
+  const dividerImage = useRef(null)
+  const dividerInView = useInView(dividerImage, { once: true })
 
   useEffect(() => {
     if (textInView) {
@@ -55,7 +60,7 @@ function Projects() {
         { duration: 0.5, delay: stagger(0.2), ease: 'circOut' }
       )
     } else {
-      animate('.animate-projects-text', { opacity: 0, y: -10 }, { duration: 0 })
+      animate('.animate-projects-text', { opacity: 0, y: -20 }, { duration: 0 })
     }
   }, [textInView])
 
@@ -79,15 +84,46 @@ function Projects() {
     }
   }, [imagesInView])
 
+  useEffect(() => {
+    if (dividerInView) {
+      animate(
+        '.animate-divider',
+        { opacity: 1, x: 0 },
+        {
+          duration: 1.2,
+          ease: 'circOut',
+        }
+      )
+    } else {
+      animate('.animate-divider', { opacity: 0, x: 1000 }, { duration: 0 })
+    }
+  }, [dividerInView])
+
   return (
     <>
-      <section id="projects" className="container pt-3 pb-2">
-        <div className="text-center" ref={projectsText}>
-          <h1 className="text-primary animate-projects-text text-6xl">
-            Projects
+      <section id="projects" className="container relative pt-10 md:pt-20 pb-5">
+        <Container fluid="lg">
+          <div
+            className="absolute left-0 lg:left-[34%] overflow-hidden"
+            ref={dividerImage}
+          >
+            {' '}
+            <img
+              src={divider}
+              alt="Attention To Detail Logo"
+              width="100%"
+              loading="eager"
+              decoding="async"
+              className="hidden md:block animate-divider"
+            />
+          </div>
+        </Container>
+        <div className="md:pt-20" ref={projectsText}>
+          <h1 className="header pb-10 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-center animate-projects-text">
+            Our Projects
           </h1>
-          <p className="text-2xl text-light mb-2 pb-2 pt-4 animate-projects-text font-medium">
-            Some of our favourite Renovation and New Build projects we have
+          <p className="roboto-paragraph max-w-[700px] text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10">
+            Some of our favourite renovation and new build projects we have
             completed!
           </p>
         </div>
@@ -102,7 +138,7 @@ function Projects() {
               <motion.img
                 onClick={handleShowProjectOne}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectOneImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted home and fence"
@@ -126,7 +162,7 @@ function Projects() {
                 animation={true}
                 centered={true}
                 style={{
-                  backgroundColor: 'rgb(37, 37, 37, 0.95)',
+                  backgroundColor: '#dfd4cea2',
                 }}
                 data-bs-theme="dark"
                 size="lg"
@@ -136,9 +172,9 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
                         Rangihiroa Street, Waikanae
                       </h2>
                     </Modal.Title>
@@ -149,7 +185,6 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectOneImages.map((image) => {
                         return (
@@ -162,7 +197,7 @@ function Projects() {
                               }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
@@ -174,18 +209,17 @@ function Projects() {
             </Col>
 
             {/* ----------- SECOND PROJECT INFO ----------- */}
-
             <Col xs={12} md={6}>
               <motion.img
                 onClick={handleShowProjectTwo}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectTwoImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior painted new build"
                 loading="lazy"
                 decoding="async"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
                   type: 'spring',
@@ -202,7 +236,9 @@ function Projects() {
                 onHide={handleCloseProjectTwo}
                 animation={true}
                 centered={true}
-                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                style={{
+                  backgroundColor: '#dfd4cea2',
+                }}
                 data-bs-theme="dark"
                 size="lg"
               >
@@ -211,9 +247,9 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
                         Oriental Bay, Wellington
                       </h2>
                     </Modal.Title>
@@ -224,7 +260,6 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectTwoImages.map((image) => {
                         return (
@@ -232,12 +267,12 @@ function Projects() {
                             <img
                               src={image.image}
                               alt={
-                                'Exterior & Interior painted new build' +
+                                'Exterior & Interior painting renovation' +
                                 image.id
                               }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
@@ -254,7 +289,7 @@ function Projects() {
               <motion.img
                 onClick={handleShowProjectThree}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectThreeImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted new build"
@@ -277,7 +312,9 @@ function Projects() {
                 onHide={handleCloseProjectThree}
                 animation={true}
                 centered={true}
-                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                style={{
+                  backgroundColor: '#dfd4cea2',
+                }}
                 data-bs-theme="dark"
                 size="lg"
               >
@@ -286,9 +323,11 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Huia Street, Waikanae</h2>
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
+                        Huia Street, Waikanae
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -297,7 +336,6 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectThreeImages.map((image) => {
                         return (
@@ -305,12 +343,12 @@ function Projects() {
                             <img
                               src={image.image}
                               alt={
-                                'Exterior & Interior painted new build' +
+                                'Exterior & Interior painting renovation' +
                                 image.id
                               }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
@@ -320,20 +358,19 @@ function Projects() {
                 </motion.div>
               </Modal>
             </Col>
-
             {/* ----------- FOURTH PROJECT INFO ----------- */}
 
             <Col xs={12} md={6}>
               <motion.img
                 onClick={handleShowProjectFour}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectFourImage}
                 className="img-fluid mb-5 animate-project-images"
-                alt="Exterior painted renovation"
+                alt="Exterior & Interior painted renovation"
                 loading="lazy"
                 decoding="async"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
                   type: 'spring',
@@ -350,7 +387,9 @@ function Projects() {
                 onHide={handleCloseProjectFour}
                 animation={true}
                 centered={true}
-                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                style={{
+                  backgroundColor: '#dfd4cea2',
+                }}
                 data-bs-theme="dark"
                 size="lg"
               >
@@ -359,9 +398,11 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Kohekohe Road, Waikanae</h2>
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
+                        Kohekohe, Waikanae
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -370,17 +411,19 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectFourImages.map((image) => {
                         return (
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Exterior painted renovation' + image.id}
+                              alt={
+                                'Exterior & Interior painting renovation' +
+                                image.id
+                              }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
@@ -397,7 +440,7 @@ function Projects() {
               <motion.img
                 onClick={handleShowProjectFive}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectFiveImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Exterior & Interior painted new build"
@@ -420,7 +463,9 @@ function Projects() {
                 onHide={handleCloseProjectFive}
                 animation={true}
                 centered={true}
-                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                style={{
+                  backgroundColor: '#dfd4cea2',
+                }}
                 data-bs-theme="dark"
                 size="lg"
               >
@@ -429,9 +474,11 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">Huia Street, Waikanae</h2>
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
+                        Huia Street, Waikanae
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -440,7 +487,6 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectFiveImages.map((image) => {
                         return (
@@ -448,12 +494,12 @@ function Projects() {
                             <img
                               src={image.image}
                               alt={
-                                'Exterior & Interior painted new build' +
+                                'Exterior & Interior painting renovation' +
                                 image.id
                               }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
@@ -470,13 +516,13 @@ function Projects() {
               <motion.img
                 onClick={handleShowProjectSix}
                 aria-hidden="true"
-                style={{ cursor: 'pointer', borderRadius: '8%' }}
+                style={{ cursor: 'pointer' }}
                 src={mainProjectSixImage}
                 className="img-fluid mb-5 animate-project-images"
                 alt="Interior painted renovation"
                 loading="lazy"
                 decoding="async"
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: -50 }}
                 transition={{
                   duration: 2,
                   type: 'spring',
@@ -493,7 +539,9 @@ function Projects() {
                 onHide={handleCloseProjectSix}
                 animation={true}
                 centered={true}
-                style={{ backgroundColor: 'rgb(37, 37, 37, 0.95)' }}
+                style={{
+                  backgroundColor: '#dfd4cea2',
+                }}
                 data-bs-theme="dark"
                 size="lg"
               >
@@ -502,9 +550,11 @@ function Projects() {
                   transition={{ duration: 1.5 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title className="text-primary">
-                      <h2 className="px-2 text-4xl">The Crescent, Raumati</h2>
+                  <Modal.Header className="background" closeButton>
+                    <Modal.Title className="">
+                      <h2 className="px-2 text-4xl secondary-header">
+                        The Crescent, Raumati
+                      </h2>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="background">
@@ -513,17 +563,19 @@ function Projects() {
                       Exercitationem illo possimus quo expedita soluta similique
                       corporis itaque maxime neque ab.
                     </p> */}
-
                     <Carousel fade={true}>
                       {projectSixImages.map((image) => {
                         return (
                           <Carousel.Item key={image.id}>
                             <img
                               src={image.image}
-                              alt={'Interior painted renovation' + image.id}
+                              alt={
+                                'Exterior & Interior painting renovation' +
+                                image.id
+                              }
                               loading="lazy"
                               decoding="async"
-                              style={{ borderRadius: '2%' }}
+                              className="rounded-2xl shadow-2xl"
                             />
                           </Carousel.Item>
                         )
