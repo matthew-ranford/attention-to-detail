@@ -16,8 +16,8 @@ function App() {
         </div>
         <Hero />
         <div className="background">
-          {/* <About /> */}
-          {/* <Services /> */}
+          <About />
+          <Services />
           {/* <Projects /> */}
           {/* <div className="background-change"> */}
           {/* <Gallery /> */}
