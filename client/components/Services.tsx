@@ -222,6 +222,24 @@ function Services() {
             </Col>
           </Row>
         </Container>
+        <motion.div
+          className="pt-10 text-center"
+          initial={{ opacity: 0, y: 10 }}
+          transition={{
+            duration: 1.5,
+            type: 'tween',
+            stiffness: 50,
+            damping: 8,
+          }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 'all' }}
+        >
+          <a href="#contact" className="no-underline">
+            <button className="text-white w-[280px] sm:w-[220px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] sm:mt-7 px-5 py-3">
+              Get a quote now
+            </button>
+          </a>
+        </motion.div>
       </section>
     </>
   )

@@ -101,7 +101,7 @@ function Projects() {
 
   return (
     <>
-      <section id="projects" className="container relative pt-10 md:pt-20 pb-5">
+      <section id="projects" className="container relative pt-10 md:pt-32 pb-5">
         <Container fluid="lg">
           <div
             className="absolute left-0 lg:left-[34%] overflow-hidden"
@@ -118,11 +118,11 @@ function Projects() {
             />
           </div>
         </Container>
-        <div className="md:pt-20 mx-10" ref={projectsText}>
-          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left max-w-[480px] ml-auto animate-projects-text">
+        <div className="md:pt-20  mx-4 md:mx-10" ref={projectsText}>
+          <h1 className="secondary-header pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl md:text-left max-w-[480px] ml-auto animate-projects-text">
             Our Projects
           </h1>
-          <p className="roboto-paragraph text-left text-lg md:text-xl 2xl:text-2xl animate-projects-text pb-10 max-w-[470px] ml-auto">
+          <p className="roboto-paragraph text-left text-lg md:text-xl 2xl:text-2xl animate-projects-text pb-10 max-w-[470px] ml-auto pt-4">
             Some of our favourite renovation and new build projects we have
             completed!
           </p>
@@ -174,7 +174,7 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl secondary-header">
                         Rangihiroa Street, Waikanae
                       </h2>
                     </Modal.Title>
@@ -249,7 +249,7 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl  secondary-header">
                         Oriental Bay, Wellington
                       </h2>
                     </Modal.Title>
@@ -325,7 +325,7 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl secondary-header">
                         Huia Street, Waikanae
                       </h2>
                     </Modal.Title>
@@ -400,8 +400,8 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
-                        Kohekohe, Waikanae
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl  secondary-header">
+                        Kohekohe Road, Waikanae
                       </h2>
                     </Modal.Title>
                   </Modal.Header>
@@ -476,7 +476,7 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl  secondary-header">
                         Huia Street, Waikanae
                       </h2>
                     </Modal.Title>
@@ -552,7 +552,7 @@ function Projects() {
                 >
                   <Modal.Header className="background" closeButton>
                     <Modal.Title className="">
-                      <h2 className="px-2 text-4xl secondary-header">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl  secondary-header">
                         The Crescent, Raumati
                       </h2>
                     </Modal.Title>

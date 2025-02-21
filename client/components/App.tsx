@@ -18,7 +18,7 @@ function App() {
         <div className="background">
           <About />
           <Services />
-          {/* <Projects /> */}
+          <Projects />
           {/* <div className="background-change"> */}
           {/* <Gallery /> */}
           {/* </div> */}
