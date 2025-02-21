@@ -3,22 +3,6 @@ import { motion } from 'framer-motion'
 
 import logo from '../images/logo.png'
 
-// const listVariants = {
-//   hidden: {
-//     y: -20,
-//     opacity: 0,
-//     scale: 0,
-//   },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       duration: 0.9,
-//     },
-//   },
-// }
-
 const navLinks = [
   { href: '#about', text: 'About' },
   { href: '#services', text: 'Services' },
@@ -65,7 +49,7 @@ function Navigation() {
                     style={{ backgroundColor: '#FFF' }}
                   >
                     <motion.h1
-                      className="text-end display-6 pt-4"
+                      className="text-end display-6 pt-4 pe-2"
                       style={{ color: '#006cc1' }}
                       whileHover={{
                         textShadow: '0px 0px 5px ##005cc2',
@@ -73,20 +57,10 @@ function Navigation() {
                     >
                       Close
                     </motion.h1>
-                    {/* <motion.img
-                      src={logo}
-                      className="img-fluid "
-                      style={{ height: '200px', margin: 'auto' }}
-                      alt="Company Logo"
-                      initial={{ y: -100, scale: 0 }}
-                      transition={{ duration: 0.7 }}
-                      animate={{ y: 0, scale: 1 }}
-                    /> */}
-
                     <motion.img
                       src={logo}
                       alt="Attention To Detail Logo"
-                      width="400px"
+                      width="300px"
                       loading="eager"
                       decoding="async"
                       className="img-fluid"
@@ -102,12 +76,7 @@ function Navigation() {
                 <Nav className="w-100 justify-content-end align-items-center gap-4">
                   {navLinks.map((link, index) => (
                     <Nav.Link key={index} href={link.href} className="nav-link">
-                      <motion.div
-                        // variants={listVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        className="text-dark"
-                      >
+                      <motion.div className="text-dark">
                         {link.text === 'Contact' ? (
                           <motion.button
                             className="text-white rounded bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] px-4 py-2"

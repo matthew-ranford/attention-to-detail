@@ -92,26 +92,26 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: -10 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   type: 'tween',
                   stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                viewport={{ once: true, amount: 'some' }}
               />
             </Col>
             <Col xs={12} md={6}>
               <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                transition={{
-                  duration: 0.5,
-                  type: 'tween',
-                  stiffness: 50,
-                  damping: 8,
-                }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                // initial={{ opacity: 0, x: 10 }}
+                // transition={{
+                //   duration: 0.5,
+                //   type: 'tween',
+                //   stiffness: 50,
+                //   damping: 8,
+                // }}
+                // whileInView={{ x: 0, opacity: 1 }}
+                // viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
                 <h2 className="secondary-header text-[#883E1B] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
@@ -129,15 +129,15 @@ function Services() {
           <Row className="justify-content-center align-items-center reverse-col ">
             <Col xs={12} md={6}>
               <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                transition={{
-                  duration: 0.5,
-                  type: 'tween',
-                  stiffness: 50,
-                  damping: 8,
-                }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                // initial={{ opacity: 0, x: -10 }}
+                // transition={{
+                //   duration: 0.5,
+                //   type: 'tween',
+                //   stiffness: 50,
+                //   damping: 8,
+                // }}
+                // whileInView={{ x: 0, opacity: 1 }}
+                // viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
                 <h2 className="secondary-header text-[#1281DD] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
@@ -161,7 +161,7 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: 10 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   type: 'tween',
                   stiffness: 50,
                   damping: 8,
@@ -182,7 +182,7 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: -10 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   type: 'tween',
                   stiffness: 50,
                   damping: 8,
@@ -193,15 +193,15 @@ function Services() {
             </Col>
             <Col xs={12} md={6}>
               <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                transition={{
-                  duration: 0.5,
-                  type: 'tween',
-                  stiffness: 50,
-                  damping: 8,
-                }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                // initial={{ opacity: 0, x: 10 }}
+                // transition={{
+                //   duration: 0.5,
+                //   type: 'tween',
+                //   stiffness: 50,
+                //   damping: 8,
+                // }}
+                // whileInView={{ x: 0, opacity: 1 }}
+                // viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
                 <h2 className="secondary-header text-[#273859] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
@@ -221,15 +221,15 @@ function Services() {
           <Row className="justify-content-center align-items-center reverse-col ">
             <Col xs={12} md={6}>
               <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                transition={{
-                  duration: 0.5,
-                  type: 'tween',
-                  stiffness: 50,
-                  damping: 8,
-                }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                // initial={{ opacity: 0, x: -10 }}
+                // transition={{
+                //   duration: 0.5,
+                //   type: 'tween',
+                //   stiffness: 50,
+                //   damping: 8,
+                // }}
+                // whileInView={{ x: 0, opacity: 1 }}
+                // viewport={{ once: true, amount: 'all' }}
                 className="center-text"
               >
                 <h2 className="secondary-header text-[#A75239] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
@@ -255,13 +255,13 @@ function Services() {
                 decoding="async"
                 initial={{ opacity: 0, x: 10 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 1.5,
                   type: 'tween',
                   stiffness: 50,
                   damping: 8,
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, amount: 'all' }}
+                viewport={{ once: true, amount: 'some' }}
               />
             </Col>
           </Row>
