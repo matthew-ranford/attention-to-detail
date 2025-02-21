@@ -109,9 +109,9 @@ function Contact() {
         id="contact"
         className="bg-[#c1c7c7] m-4 pt-2 pb-4 rounded-2xl shadow-2xl"
       >
-        <div className="text-left px-24" ref={contact}>
+        <div className="text-left px-3 md:px-24" ref={contact}>
           <div className="animate-contact">
-            <h1 className="secondary-header mt-4 pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl">
+            <h1 className="secondary-header mt-4 pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl">
               Contact us!
             </h1>
           </div>
@@ -137,7 +137,9 @@ function Contact() {
                   label={
                     <span className="input-group">
                       <UserIcon className="h-5 w-5 contact-icon" />
-                      <span className="px-2">Name</span>
+                      <span className="px-2 roboto-paragraph text-sm md:text-md 2xl:text-2xl">
+                        Name
+                      </span>
                     </span>
                   }
                   className="mb-3"
@@ -151,7 +153,11 @@ function Contact() {
                     onChange={handleFormInputChange}
                     aria-describedby="nameHelp"
                   />
-                  <Form.Text id="nameHelp" className="px-2" muted>
+                  <Form.Text
+                    id="nameHelp"
+                    className="md:px-2 roboto-paragraph text-sm md:text-xl 2xl:text-2xl"
+                    muted
+                  >
                     Enter first and/or last name
                   </Form.Text>
                 </FloatingLabel>
@@ -160,7 +166,9 @@ function Contact() {
                   label={
                     <span className="input-group">
                       <i className="bi bi-envelope-at-fill h-6 w-6 px-1 contact-icon" />
-                      <span className="px-2">Email</span>
+                      <span className="px-2 roboto-paragraph text-sm md:text-md 2xl:text-2xl">
+                        Email
+                      </span>
                     </span>
                   }
                   className="mb-3"
@@ -174,7 +182,11 @@ function Contact() {
                     onChange={handleFormInputChange}
                     aria-describedby="emailHelp"
                   />
-                  <Form.Text id="emailHelp" className="px-2" muted>
+                  <Form.Text
+                    id="emailHelp"
+                    className="md:px-2 roboto-paragraph text-sm md:text-xl 2xl:text-2xl"
+                    muted
+                  >
                     Enter valid email address, e.g: example@gmail.com
                   </Form.Text>
                 </FloatingLabel>
@@ -183,7 +195,9 @@ function Contact() {
                   label={
                     <span className="input-group">
                       <i className="bi bi-phone-fill h-6 w-6 px-1 contact-icon" />
-                      <span className="px-2">Phone</span>
+                      <span className="px-2 roboto-paragraph text-sm md:text-md 2xl:text-2xl">
+                        Phone
+                      </span>
                     </span>
                   }
                   className="mb-3"
@@ -198,7 +212,11 @@ function Contact() {
                     onChange={handleFormInputChange}
                     aria-describedby="numberHelp"
                   />
-                  <Form.Text id="numberHelp" className="px-2" muted>
+                  <Form.Text
+                    id="numberHelp"
+                    className="md:px-2 roboto-paragraph text-sm md:text-xl 2xl:text-2xl"
+                    muted
+                  >
                     Enter valid phone number (+ sign optional & numbers)
                   </Form.Text>
                 </FloatingLabel>
@@ -207,7 +225,9 @@ function Contact() {
                   label={
                     <span className="input-group">
                       <BookOpenIcon className="h-5 w-5 contact-icon mt-1" />
-                      <span className="px-2">Subject</span>
+                      <span className="px-2 roboto-paragraph text-sm md:text-md 2xl:text-2xl">
+                        Subject
+                      </span>
                     </span>
                   }
                   className="mb-3"
@@ -221,7 +241,11 @@ function Contact() {
                     onChange={handleFormInputChange}
                     aria-describedby="subjectHelp"
                   />
-                  <Form.Text id="subjectHelp" className="px-2" muted>
+                  <Form.Text
+                    id="subjectHelp"
+                    className="md:px-2 roboto-paragraph text-sm md:text-xl 2xl:text-2xl"
+                    muted
+                  >
                     Enter the subject matter this is regarding
                   </Form.Text>
                 </FloatingLabel>
@@ -231,7 +255,9 @@ function Contact() {
                   label={
                     <span className="input-group">
                       <ChatBubbleBottomCenterTextIcon className="h-5 w-5 contact-icon mt-1" />
-                      <span className="px-2">Message</span>
+                      <span className="px-2 roboto-paragraph text-sm md:text-md 2xl:text-2xl">
+                        Message
+                      </span>
                     </span>
                   }
                   className="mb-3"
@@ -246,8 +272,12 @@ function Contact() {
                     aria-describedby="messageHelp"
                     style={{ height: '10rem' }}
                   />
-                  <Form.Text id="messageHelp" className="px-2" muted>
-                    Enter your message you have for me
+                  <Form.Text
+                    id="messageHelp"
+                    className="md:px-2 roboto-paragraph text-sm md:text-xl 2xl:text-2xl"
+                    muted
+                  >
+                    Enter your message you have for us
                   </Form.Text>
                 </FloatingLabel>
                 <motion.div
@@ -257,7 +287,7 @@ function Contact() {
                   whileInView={{ y: 0, opacity: 1 }}
                 >
                   <motion.button
-                    className="text-white w-[350px] sm:w-[230px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] mt-4 px-5 py-3"
+                    className="text-white w-[220px] sm:w-[230px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] mt-4 px-5 py-3"
                     type="submit"
                     whileHover={{
                       scale: 1.05,
@@ -271,7 +301,7 @@ function Contact() {
             </Col>
 
             <Col className="text-center">
-              <h1 className="secondary-header pb-3 text-black text-[3.2rem] md:text-5xl 2xl:text-7xl animate-form-and-icons">
+              <h1 className="mt-10 sm:mt-0 secondary-header pb-3 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl animate-form-and-icons">
                 Links
               </h1>
               <Col xs={12} md={12} className="pb-3 animate-form-and-icons">

@@ -43,7 +43,7 @@ function Hero() {
             decoding="async"
             className="h-[620px] md:h-[680px] 2xl:h-[1300px] object-cover rounded-2xl shadow-2xl"
           />
-          <div className="absolute inset-0 bg-[#006cc1] bg-opacity-30 sm:hidden"></div>
+          <div className="absolute inset-0 bg-[#006cc1] bg-opacity-30 rounded-2xl shadow-2xl sm:hidden"></div>
         </div>
         <Container fluid="lg">
           <div

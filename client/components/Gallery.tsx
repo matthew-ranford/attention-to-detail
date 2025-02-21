@@ -64,7 +64,7 @@ function Gallery() {
           </div>
         </Container>
         <div className="md:pt-20 px-3" ref={galleryText}>
-          <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left animate-gallery-text">
+          <h1 className="secondary-header pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl md:text-left animate-gallery-text">
             Our Gallery
           </h1>
           <p className="roboto-paragraph text-left text-lg md:text-xl 2xl:text-2xl animate-projects-text mx-auto pb-10 animate-gallery-text">
@@ -77,7 +77,7 @@ function Gallery() {
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
           >
-            <h1 className="secondary-header text-center text-4xl pb-4">
+            <h1 className="secondary-header text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl pb-4">
               Exterior Painting
             </h1>
             <Carousel
@@ -107,7 +107,7 @@ function Gallery() {
             whileInView={{ opacity: 1 }}
             className="pt-5"
           >
-            <h1 className="secondary-header text-center text-4xl pt-10 pb-4">
+            <h1 className="secondary-header text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl pt-10 pb-4">
               Interior Painting & Decorating
             </h1>
             <Carousel

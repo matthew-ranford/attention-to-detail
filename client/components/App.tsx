@@ -20,10 +20,10 @@ function App() {
           <Services />
           <Projects />
           {/* <div className="background-change"> */}
-          {/* <Gallery /> */}
+          <Gallery />
           {/* </div> */}
           {/* <div className="background-change"> */}
-          {/* <Contact /> */}
+          <Contact />
           {/* <Footer /> */}
           {/* </div> */}
         </div>
