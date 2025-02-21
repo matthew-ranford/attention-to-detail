@@ -47,7 +47,7 @@ function Services() {
     <>
       <section
         id="services"
-        className="container relative mt-[30rem] pt-10 md:pt-24 pb-5"
+        className="container relative mt-[26rem] md:mt-[30rem] pt-10 md:pt-24 pb-5"
       >
         <Container fluid="lg">
           <div
@@ -65,11 +65,11 @@ function Services() {
             />
           </div>
 
-          <div className="md:pt-20 px-4" ref={servicesText}>
-            <h1 className="secondary-header pb-2 text-black text-[3.2rem] md:text-6xl 2xl:text-7xl md:text-left animate-service-text">
+          <div className="md:pt-20 md:px-4" ref={servicesText}>
+            <h1 className="secondary-header pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl md:text-left animate-service-text">
               Our Services
             </h1>
-            <div className="roboto-paragraph max-w-[500px] text-left text-lg md:text-xl 2xl:text-2xl animate-service-text pb-10">
+            <div className="roboto-paragraph max-w-[500px] md:max-w-[550px] xl:max-w-[730px] 2xl:max-w-[800px]  text-left text-lg md:text-xl 2xl:text-2xl animate-service-text pb-10 px-2 pt-4">
               <p className="animate-service-text">
                 Attention to Detail Painting & Decorating services is located in
                 the Hutt Valley region, and works all over the Greater
@@ -102,22 +102,11 @@ function Services() {
               />
             </Col>
             <Col xs={12} md={6}>
-              <motion.div
-                // initial={{ opacity: 0, x: 10 }}
-                // transition={{
-                //   duration: 0.5,
-                //   type: 'tween',
-                //   stiffness: 50,
-                //   damping: 8,
-                // }}
-                // whileInView={{ x: 0, opacity: 1 }}
-                // viewport={{ once: true, amount: 'all' }}
-                className="center-text"
-              >
-                <h2 className="secondary-header text-[#883E1B] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+              <motion.div className="text-left lg:mt-10">
+                <h2 className="secondary-header text-[#883E1B] text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl ">
                   New Builds
                 </h2>
-                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
+                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-2 md:mx-10 pt-4">
                   Whether you need a fresh coat of paint to spruce up your
                   exisiting home or colour advice to shape your new one.
                   Attention to Detail Decorators are here for all of your
@@ -126,24 +115,13 @@ function Services() {
               </motion.div>
             </Col>
           </Row>
-          <Row className="justify-content-center align-items-center reverse-col ">
+          <Row className="justify-content-center align-items-center reverse-col">
             <Col xs={12} md={6}>
-              <motion.div
-                // initial={{ opacity: 0, x: -10 }}
-                // transition={{
-                //   duration: 0.5,
-                //   type: 'tween',
-                //   stiffness: 50,
-                //   damping: 8,
-                // }}
-                // whileInView={{ x: 0, opacity: 1 }}
-                // viewport={{ once: true, amount: 'all' }}
-                className="center-text"
-              >
-                <h2 className="secondary-header text-[#1281DD] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+              <motion.div className="text-left md:mt-20 lg:mt-10">
+                <h2 className="secondary-header text-[#1281DD] text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl ">
                   Renovations
                 </h2>
-                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
+                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-2 md:mx-10 pt-4">
                   Whether renovating an existing space or adding square meters
                   to your home, Attention to Detail is here for all your
                   interior and exterior painting needs.
@@ -154,7 +132,7 @@ function Services() {
               <motion.img
                 aria-hidden="true"
                 src={renovationImage}
-                className="img-fluid mt-5 mb-5"
+                className="img-fluid mt-5 md:mb-5"
                 style={{ borderRadius: '8%' }}
                 alt="Exterior painted home being renovated"
                 loading="lazy"
@@ -175,7 +153,7 @@ function Services() {
             <Col xs={12} md={6}>
               <motion.img
                 src={roofPaintingImage}
-                className="img-fluid mt-5 mb-5"
+                className="img-fluid mt-5 md:mb-5"
                 style={{ borderRadius: '8%' }}
                 alt="Newly painted roof"
                 loading="lazy"
@@ -192,22 +170,11 @@ function Services() {
               />
             </Col>
             <Col xs={12} md={6}>
-              <motion.div
-                // initial={{ opacity: 0, x: 10 }}
-                // transition={{
-                //   duration: 0.5,
-                //   type: 'tween',
-                //   stiffness: 50,
-                //   damping: 8,
-                // }}
-                // whileInView={{ x: 0, opacity: 1 }}
-                // viewport={{ once: true, amount: 'all' }}
-                className="center-text"
-              >
-                <h2 className="secondary-header text-[#273859] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+              <motion.div className="text-left md:mt-20 lg:mt-10">
+                <h2 className="secondary-header text-[#273859] text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl ">
                   Roof Painting
                 </h2>
-                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
+                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-2 md:mx-10 pt-4">
                   Transform your home&apos;s exterior with our professional roof
                   painting services. Say goodbye to dull weathered roofs and
                   hello to vibrant long-lasting colours. Whether you&apos;re
@@ -220,22 +187,11 @@ function Services() {
           </Row>
           <Row className="justify-content-center align-items-center reverse-col ">
             <Col xs={12} md={6}>
-              <motion.div
-                // initial={{ opacity: 0, x: -10 }}
-                // transition={{
-                //   duration: 0.5,
-                //   type: 'tween',
-                //   stiffness: 50,
-                //   damping: 8,
-                // }}
-                // whileInView={{ x: 0, opacity: 1 }}
-                // viewport={{ once: true, amount: 'all' }}
-                className="center-text"
-              >
-                <h2 className="secondary-header text-[#A75239] text-[3.2rem] md:text-4xl 2xl:text-7xl mx-10">
+              <motion.div className="text-left md:mt-20 lg:mt-10">
+                <h2 className="secondary-header text-[#A75239] text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl ">
                   Waterblasting
                 </h2>
-                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-10 pt-4">
+                <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl mx-2 md:mx-10 pt-4">
                   Revitalize your surfaces with our water blasting services, and
                   say farewell to grime, mold, and slippery surfaces, whether
                   it&apos;s your driveway, patio, deck, or exterior of your
@@ -248,7 +204,7 @@ function Services() {
               <motion.img
                 aria-hidden="true"
                 src={waterblastingImage}
-                className="img-fluid mt-5 mb-5"
+                className="img-fluid mt-5 md:mb-5"
                 style={{ borderRadius: '8%' }}
                 alt="Waterblasting deck"
                 loading="lazy"
