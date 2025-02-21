@@ -63,14 +63,18 @@ function Hero() {
               ideas to life. Let us help you create a space you&apos;ll love.
             </p>
             <div className="block sm:inline-block pt-4 animate-hero-text">
-              <button className="text-white w-[280px] sm:w-[200px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] sm:mt-7 px-5 py-3">
-                Get a quote
-              </button>
+              <a href="#contact" className="no-underline">
+                <button className="text-white w-[280px] sm:w-[200px] rounded shadow-2xl bg-[#006cc1] transition-all duration-1000 hover:bg-[#006dc1a4] sm:mt-7 px-5 py-3">
+                  Get a quote
+                </button>
+              </a>
             </div>
             <div className="block sm:inline-block mt-2 animate-hero-text">
-              <button className="w-[280px] sm:w-[200px] border rounded shadow-2xl bg-[#C1C7C7] border-black transition-all duration-1000 hover:bg-[#a4a8a8] mt-2 sm:mt-7 sm:ml-5 px-5 py-3">
-                Our services
-              </button>
+              <a href="#services" className="no-underline">
+                <button className="text-black w-[280px] sm:w-[200px] border rounded shadow-2xl bg-[#C1C7C7] border-black transition-all duration-1000 hover:bg-[#a4a8a8] mt-2 sm:mt-7 sm:ml-5 px-5 py-3">
+                  Our services
+                </button>
+              </a>
             </div>
           </div>
         </Container>
