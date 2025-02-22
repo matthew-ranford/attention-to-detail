@@ -13,21 +13,26 @@ function Footer() {
             initial={{ opacity: 0 }}
             transition={{ duration: 1.5 }}
             whileInView={{ opacity: 1 }}
+            className="position-relative back-to-top-wrapper"
           >
             <img
               src={logo}
               alt="Attention To Detail Logo"
-              width={150}
-              className="-mx-4"
+              width={170}
+              className="-mx-2 md:-mx-4"
               loading="lazy"
               decoding="async"
             />
+            <span className="back-to-top-text roboto-paragraph">
+              Back to top
+            </span>
           </motion.a>
         </Col>
       </Row>
+
       <div className="pt-2">
         <p className="text-left roboto-paragraph text-sm">
-          © 2024 ATD Decorators | All rights reserved | +64 27 312 9323
+          © 2025 ATD Decorators | All rights reserved | +64 27 312 9323
         </p>
       </div>
       <div>
@@ -37,9 +42,11 @@ function Footer() {
             href="https://matthewranford.com"
             target="_blank"
             rel="noreferrer"
-            className="roboto-paragraph text-black text-sm hover:text-[#006cc1] transition duration-1000 no-underline"
+            className="roboto-paragraph text-black text-sm no-underline"
           >
-            Matthew Ranford
+            <span className="hover:text-[#006cc1] transition duration-1000 ">
+              Matthew Ranford
+            </span>
           </a>
         </p>
       </div>

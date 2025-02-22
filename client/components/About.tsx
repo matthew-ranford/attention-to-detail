@@ -68,7 +68,7 @@ function About() {
             {' '}
             <img
               src={divider}
-              alt="Attention To Detail Logo"
+              alt="Line divider"
               width="100%"
               loading="eager"
               decoding="async"
@@ -80,19 +80,19 @@ function About() {
               Who We Are
             </h1>{' '}
             <div
-              className="z-50 absolute w-[230px] sm:w-[350px] lg:w-[500px] xl:w-[580px] 2xl:w-[650px] left-[35%] md:left-[50%] top-[76%] md:top-[92%] lg:top-[105%] 2xl:top-[110%] roboto-paragraph text-lg md:text-xl 2xl:text-2xl"
+              className="z-50 absolute w-[230px] sm:w-[350px] lg:w-[500px] 2xl:w-[650px] left-[40%] md:left-[55%] top-[76%] md:top-[92%] lg:top-[105%] xl:top-[100%] 2xl:top-[105%] roboto-paragraph text-lg md:text-xl 2xl:text-2xl"
               ref={aboutText}
             >
               <p className="animate-text pt-4 sm:pt-0 -mt-2 sm:-mt-2 md:-mt-1 lg:-mt-10 xl:-mt-2">
                 Our founder Corey Daken has been working in the industry for
                 over 10 years bringing a range of experience with him.{' '}
               </p>
-              <p className="animate-text text-left pt-4 -mx-24 w-[370px] lg:w-[500px] xl:w-[580px] sm:-mt-4 sm:-mx-0">
+              <p className="animate-text text-left pt-4 -mx-24 w-[370px] lg:w-[500px]  2xl:w-[650px] sm:-mt-4 sm:-mx-0">
                 His work has involved collaborating with architects, interior
                 designers, construction companies and home owners to meet the
                 results that his clients desire.
               </p>
-              <p className="animate-text -mx-24 w-[350px] lg:w-[500px] xl:w-[580px] sm:-mx-0">
+              <p className="animate-text -mx-24 w-[350px] lg:w-[500px] 2xl:w-[650px] sm:-mx-0">
                 {' '}
                 Whether you need a fresh coat of paint to spruce up your
                 existing home or colour advice to shape your new one. Attention
@@ -104,9 +104,9 @@ function About() {
           <div ref={aboutImage}>
             <img
               src={aboutImageMain}
-              alt="Decorative interior painting"
+              alt="Decorative exterior painting"
               width=""
-              loading="eager"
+              loading="lazy"
               decoding="async"
               className="absolute -left-[15%] md:left-0 overflow-hidden animate-image"
             />

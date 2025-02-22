@@ -101,3 +101,28 @@ button.btn-close {
 .contact-icon {
   color: #006cc1;
 }
+
+.back-to-top-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.back-to-top-text {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background: #006dc1c7;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 120px;
+  text-align: center;
+}
+
+.back-to-top-wrapper:hover .back-to-top-text {
+  opacity: 1;
+}

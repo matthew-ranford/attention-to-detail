@@ -1,4 +1,4 @@
-import hero from '../images/hero-section-atd-test.png'
+import hero from '../images/hero-section-atd.png'
 import logo from '../images/logo.png'
 
 import { Container } from 'react-bootstrap'
@@ -37,7 +37,7 @@ function Hero() {
           </Container>
           <img
             src={hero}
-            alt="Attention To Detail Logo"
+            alt="Exterior painted house with pool in foreground"
             width="100%"
             loading="eager"
             decoding="async"

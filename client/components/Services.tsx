@@ -57,7 +57,7 @@ function Services() {
             {' '}
             <img
               src={divider}
-              alt="Attention To Detail Logo"
+              alt="Line divider"
               width="100%"
               loading="eager"
               decoding="async"

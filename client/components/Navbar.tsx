@@ -73,7 +73,7 @@ function Navigation() {
                 </Navbar.Brand>
               </Navbar.Toggle>
               <Offcanvas.Body className="text-center px-2">
-                <Nav className="w-100 justify-content-end align-items-center gap-4">
+                <Nav className="w-100 justify-content-end align-items-center gap-3">
                   {navLinks.map((link, index) => (
                     <Nav.Link key={index} href={link.href} className="nav-link">
                       <motion.div className="text-dark">

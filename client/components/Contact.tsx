@@ -109,22 +109,24 @@ function Contact() {
         id="contact"
         className="bg-[#c1c7c7] m-4 pt-2 pb-4 rounded-2xl shadow-2xl"
       >
-        <div className="text-left px-3 md:px-24" ref={contact}>
-          <div className="animate-contact">
-            <h1 className="secondary-header mt-4 pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl">
-              Contact us!
-            </h1>
+        <Container fluid="lg">
+          <div className="text-left" ref={contact}>
+            <div className="animate-contact">
+              <h1 className="secondary-header mt-4 pb-2 text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl">
+                Contact us!
+              </h1>
+            </div>
+            <div className="animate-contact">
+              <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl">
+                Questions? Fill out the form to contact ATD directly!
+              </p>
+              <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl pb-10">
+                Alternatively, if you would like to get in touch, ask a
+                question, or make an enquiry, here are our details:
+              </p>
+            </div>
           </div>
-          <div className="animate-contact">
-            <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl">
-              Questions? Fill out the form to contact ATD directly!
-            </p>
-            <p className="roboto-paragraph text-lg md:text-xl 2xl:text-2xl pb-10">
-              Alternatively, if you would like to get in touch, ask a question,
-              or make an enquiry, here are our details:
-            </p>
-          </div>
-        </div>
+        </Container>
         <Container fluid="lg">
           <Row>
             <Col xs={12} md={6} ref={icons}>
